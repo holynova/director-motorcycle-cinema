@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "director": "张艺谋",
+    "subtitle": "人活一世，图个痛快。",
+    "description": "女人骑着黑色摩托车穿过古城街道，浓烈红色灯笼与金黄色墙面，强对比色彩，大面积留白，庄重对称构图，尘土飞扬，史诗感，电影级光影，高清细节",
+    "image": "assets/images/director01.webp",
+    "thumb": "assets/thumbs/director01.webp"
+  },
+  {
+    "id": 2,
+    "director": "王家卫",
+    "subtitle": "所有的记忆都是潮湿的。",
+    "description": "女人骑着复古摩托车穿过雨夜香港街道，霓虹灯反射在湿润路面，慢门拖影，绿色与红色霓虹交错，孤独浪漫氛围，窄巷构图，胶片颗粒，电影截图感",
+    "image": "assets/images/director02.webp",
+    "thumb": "assets/thumbs/director02.webp"
+  },
+  {
+    "id": 3,
+    "director": "李安",
+    "subtitle": "每个人心里都有一座断背山。",
+    "description": "女人骑摩托车穿过安静街道，城市与自然边界交融，克制情绪，柔和自然光，细腻人物表情，真实生活质感，优雅构图，温柔电影摄影",
+    "image": "assets/images/director03.webp",
+    "thumb": "assets/thumbs/director03.webp"
+  },
+  {
+    "id": 4,
+    "director": "陈凯歌",
+    "subtitle": "不疯魔，不成活。",
+    "description": "女人骑着摩托车穿过旧北京街道，戏剧化光影，传统建筑与现代交通工具对比，人物带有命运感，宽银幕构图，厚重色彩，历史与现实交错，电影级画面",
+    "image": "assets/images/director04.webp",
+    "thumb": "assets/thumbs/director04.webp"
+  },
+  {
+    "id": 5,
+    "director": "贾樟柯",
+    "subtitle": "山河依旧，故人已远。",
+    "description": "女人骑摩托车穿过中国小城街道，灰蓝天空，旧广告牌，水泥楼房，真实纪实感，冷静长镜头构图，普通街景中的孤独人物，低饱和色彩，社会现实主义摄影",
+    "image": "assets/images/director05.webp",
+    "thumb": "assets/thumbs/director05.webp"
+  },
+  {
+    "id": 6,
+    "director": "侯孝贤",
+    "subtitle": "最好的是你根本看不到的。",
+    "description": "女人骑摩托车缓慢穿过老街，远景固定机位，柔和自然光，生活化街边摊与斑驳墙面，人物被环境包围，安静克制，诗意现实主义，胶片质感",
+    "image": "assets/images/director06.webp",
+    "thumb": "assets/thumbs/director06.webp"
+  },
+  {
+    "id": 7,
+    "director": "杨德昌",
+    "subtitle": "我们是不是只能看到一半的事情？",
+    "description": "女人骑摩托车穿过台北现代街道，都市秩序感，玻璃建筑与复杂路口，冷静构图，人物显得疏离，淡雅色彩，理性而孤独的城市电影感",
+    "image": "assets/images/director07.webp",
+    "thumb": "assets/thumbs/director07.webp"
+  },
+  {
+    "id": 8,
+    "director": "杜琪峰",
+    "subtitle": "江湖不是打打杀杀，江湖是人情世故。",
+    "description": "女人骑摩托车穿过夜晚街道，硬朗黑色皮衣，冷蓝路灯，强烈明暗对比，街角暗处有紧张感，精准几何构图，香港犯罪片氛围，锐利电影光影",
+    "image": "assets/images/director08.webp",
+    "thumb": "assets/thumbs/director08.webp"
+  },
+  {
+    "id": 9,
+    "director": "徐克",
+    "subtitle": "有人的地方就有江湖。",
+    "description": "女人骑摩托车冲过充满风沙和霓虹的街道，夸张动势，广角镜头，衣摆飞扬，现代武侠感，强烈色彩，戏剧化烟雾，速度感，奇幻动作电影画面",
+    "image": "assets/images/director09.webp",
+    "thumb": "assets/thumbs/director09.webp"
+  },
+  {
+    "id": 10,
+    "director": "关锦鹏",
+    "subtitle": "也许每一个男子全都有过这样的两个女人。",
+    "description": "女人骑摩托车穿过夜色街道，柔美灯光，复古服装，情绪化面部特写，怀旧都市氛围，细腻女性视角，淡淡忧伤，暖色胶片质感，优雅电影摄影",
+    "image": "assets/images/director10.webp",
+    "thumb": "assets/thumbs/director10.webp"
+  },
+  {
+    "id": 11,
+    "director": "姜文",
+    "subtitle": "让子弹飞一会儿。",
+    "description": "女人骑摩托车穿过烈日下的街道，强烈阳光，高饱和暖色，夸张透视，荒诞幽默气质，人物自信张扬，尘土与红墙，粗粝而有力量的电影画面",
+    "image": "assets/images/director11.webp",
+    "thumb": "assets/thumbs/director11.webp"
+  },
+  {
+    "id": 12,
+    "director": "毕赣",
+    "subtitle": "当我的光曝在你身上，重逢就是一间暗室。",
+    "description": "女人骑摩托车穿过潮湿夜晚的山城街道，梦境般长镜头感，绿色霓虹，烟雾，楼梯与隧道交错，现实与幻觉模糊，诗意迷离，低照度电影摄影",
+    "image": "assets/images/director12.webp",
+    "thumb": "assets/thumbs/director12.webp"
+  },
+  {
+    "id": 13,
+    "director": "娄烨",
+    "subtitle": "爱情其实就是一种瘾。",
+    "description": "女人骑摩托车穿过拥挤潮湿的城市街道，手持摄影感，失焦灯光，人物情绪强烈，混乱而亲密的都市空间，低饱和色彩，真实而躁动的电影画面",
+    "image": "assets/images/director13.webp",
+    "thumb": "assets/thumbs/director13.webp"
+  },
+  {
+    "id": 14,
+    "director": "胡金铨",
+    "subtitle": "剑道即人道，心正即剑正。",
+    "description": "女人骑摩托车穿过古老城门街道，传统武侠构图，飞扬尘土，远山与屋檐剪影，人物姿态英气，古典东方美学与现代摩托车融合，庄严宽银幕画面",
+    "image": "assets/images/director14.webp",
+    "thumb": "assets/thumbs/director14.webp"
+  },
+  {
+    "id": 15,
+    "director": "蔡明亮",
+    "subtitle": "我不知道我要去哪里，但我知道我回不去了。",
+    "description": "女人骑摩托车穿过空旷潮湿街道，几乎没有行人，静止长镜头感，水渍地面，孤独人物，冷色调，城市荒凉感，极简构图，沉默电影氛围",
+    "image": "assets/images/director15.webp",
+    "thumb": "assets/thumbs/director15.webp"
+  },
+  {
+    "id": 16,
+    "director": "吴宇森",
+    "subtitle": "我最讨厌别人用枪指着我的头。",
+    "description": "女人骑摩托车高速穿过枪战后的街道，白鸽掠过，慢动作，风衣飞扬，火光与烟雾，英雄主义姿态，强烈逆光，动作片电影级构图",
+    "image": "assets/images/director16.webp",
+    "thumb": "assets/thumbs/director16.webp"
+  },
+  {
+    "id": 17,
+    "director": "许鞍华",
+    "subtitle": "人生就是一步难一步佳。",
+    "description": "女人骑摩托车穿过普通社区街道，温和自然光，真实市井生活，街边老人和小店，人物平静而坚韧，生活质感强，柔和写实电影摄影",
+    "image": "assets/images/director17.webp",
+    "thumb": "assets/thumbs/director17.webp"
+  },
+  {
+    "id": 18,
+    "director": "冯小刚",
+    "subtitle": "做人要厚道。",
+    "description": "女人骑摩托车穿过热闹城市街道，现实生活喜剧氛围，街边广告牌，人群表情丰富，暖色自然光，轻微荒诞感，现代都市电影画面",
+    "image": "assets/images/director18.webp",
+    "thumb": "assets/thumbs/director18.webp"
+  },
+  {
+    "id": 19,
+    "director": "宁浩",
+    "subtitle": "这世上没有神，只有人。",
+    "description": "女人骑摩托车穿过混乱街道，夸张广角，路边摊、广告牌、车辆拥堵，黑色幽默感，强烈动势，饱和色彩，市井犯罪喜剧电影风格",
+    "image": "assets/images/director19.webp",
+    "thumb": "assets/thumbs/director19.webp"
+  },
+  {
+    "id": 20,
+    "director": "田壮壮",
+    "subtitle": "生于斯，长于斯，死于斯。",
+    "description": "女人骑摩托车穿过辽阔边地街道，远山、风沙、空旷道路，人物渺小而坚定，自然光，民族与土地气息，沉静宽银幕构图，史诗现实主义",
+    "image": "assets/images/director20.webp",
+    "thumb": "assets/thumbs/director20.webp"
+  },
+  {
+    "id": 21,
+    "director": "Stanley Kubrick",
+    "subtitle": "I'm sorry, Dave. I'm afraid I can't do that.",
+    "description": "女人骑摩托车穿过极度对称的城市街道，中央透视构图，冷峻几何空间，干净白色建筑，强控制感，神秘疏离氛围，精密电影摄影",
+    "image": "assets/images/director21.webp",
+    "thumb": "assets/thumbs/director21.webp"
+  },
+  {
+    "id": 22,
+    "director": "Alfred Hitchcock",
+    "subtitle": "There is no terror in the bang, only in the anticipation of it.",
+    "description": "女人骑摩托车穿过安静街道，背后建筑窗户暗藏窥视感，悬疑气氛，优雅但紧张的构图，阴影斜切路面，经典惊悚电影光影",
+    "image": "assets/images/director22.webp",
+    "thumb": "assets/thumbs/director22.webp"
+  },
+  {
+    "id": 23,
+    "director": "Akira Kurosawa",
+    "subtitle": "在这个疯狂的世界里，只有疯狂的人才是清醒的。",
+    "description": "女人骑摩托车穿过狂风暴雨中的街道，强烈天气元素，黑白高对比，尘土与雨水飞溅，人物姿态坚毅，武士片般的史诗动势，宽银幕构图",
+    "image": "assets/images/director23.webp",
+    "thumb": "assets/thumbs/director23.webp"
+  },
+  {
+    "id": 24,
+    "director": "Federico Fellini",
+    "subtitle": "La vita è una festa.",
+    "description": "女人骑摩托车穿过梦幻般的夜间街道，夸张人物、马戏团式灯光、喷泉与古典建筑，荒诞又华丽，超现实都市游行感，黑白胶片质感",
+    "image": "assets/images/director24.webp",
+    "thumb": "assets/thumbs/director24.webp"
+  },
+  {
+    "id": 25,
+    "director": "Andrei Tarkovsky",
+    "subtitle": "一个人必须独自面对自己的灵魂。",
+    "description": "女人骑摩托车穿过积水街道，雾气、废墟、湿润地面反光，时间缓慢流动，诗意孤独，低饱和自然光，冥想式电影画面",
+    "image": "assets/images/director25.webp",
+    "thumb": "assets/thumbs/director25.webp"
+  },
+  {
+    "id": 26,
+    "director": "Martin Scorsese",
+    "subtitle": "As far back as I can remember, I always wanted to be a gangster.",
+    "description": "女人骑摩托车穿过纽约夜街，红色尾灯、黄色出租车、湿润柏油路，强烈都市能量，动态跟拍感，犯罪片张力，霓虹与阴影交错",
+    "image": "assets/images/director26.webp",
+    "thumb": "assets/thumbs/director26.webp"
+  },
+  {
+    "id": 27,
+    "director": "Francis Ford Coppola",
+    "subtitle": "I'm gonna make him an offer he can't refuse.",
+    "description": "女人骑摩托车穿过昏黄街道，深色阴影，古典构图，家族史诗般厚重气氛，暖色路灯，人物神情冷静，庄重电影质感",
+    "image": "assets/images/director27.webp",
+    "thumb": "assets/thumbs/director27.webp"
+  },
+  {
+    "id": 28,
+    "director": "Steven Spielberg",
+    "subtitle": "Life finds a way.",
+    "description": "女人骑摩托车穿过街道，夕阳逆光，镜头带有冒险感，街边孩子回头注视，温暖金色光线，充满奇遇与希望，经典好莱坞电影画面",
+    "image": "assets/images/director28.webp",
+    "thumb": "assets/thumbs/director28.webp"
+  },
+  {
+    "id": 29,
+    "director": "Ridley Scott",
+    "subtitle": "I've seen things you people wouldn't believe.",
+    "description": "女人骑摩托车穿过未来雨夜街道，巨大广告屏、蓝绿色霓虹、烟雾、工业建筑，赛博朋克氛围，强烈背光，硬核科幻电影质感",
+    "image": "assets/images/director29.webp",
+    "thumb": "assets/thumbs/director29.webp"
+  },
+  {
+    "id": 30,
+    "director": "David Fincher",
+    "subtitle": "The first rule of Fight Club is: You do not talk about Fight Club.",
+    "description": "女人骑摩托车穿过阴暗城市街道，冷绿色调，潮湿混凝土，精密构图，低调光，悬疑与危险感，锐利数字电影摄影，暗黑现代都市",
+    "image": "assets/images/director30.webp",
+    "thumb": "assets/thumbs/director30.webp"
+  },
+  {
+    "id": 31,
+    "director": "Quentin Tarantino",
+    "subtitle": "You know what they call a Quarter Pounder with Cheese in Paris?",
+    "description": "女人骑摩托车穿过阳光街道，复古服装，强烈黄色与红色，低机位仰拍，酷感十足，暴力美学暗示，70年代电影海报感",
+    "image": "assets/images/director31.webp",
+    "thumb": "assets/thumbs/director31.webp"
+  },
+  {
+    "id": 32,
+    "director": "Christopher Nolan",
+    "subtitle": "You mustn't be afraid to dream a little bigger, darling.",
+    "description": "女人骑摩托车穿过巨大城市街道，高楼形成压迫透视，冷蓝灰色调，IMAX 宽银幕感，现实主义动作场面，强烈速度与命运感",
+    "image": "assets/images/director32.webp",
+    "thumb": "assets/thumbs/director32.webp"
+  },
+  {
+    "id": 33,
+    "director": "Wes Anderson",
+    "subtitle": "I've always been an outsider.",
+    "description": "女人骑摩托车穿过粉彩色街道，完全对称构图，复古招牌，整齐建筑立面，人物正面居中，柔和色彩，精致模型感，幽默童话电影画面",
+    "image": "assets/images/director33.webp",
+    "thumb": "assets/thumbs/director33.webp"
+  },
+  {
+    "id": 34,
+    "director": "Tim Burton",
+    "subtitle": "Everybody's different. That's what makes us special.",
+    "description": "女人骑摩托车穿过哥特式街道，扭曲建筑、黑白条纹、紫色夜空，怪诞浪漫气质，苍白月光，奇异但优雅，暗黑童话电影感",
+    "image": "assets/images/director34.webp",
+    "thumb": "assets/thumbs/director34.webp"
+  },
+  {
+    "id": 35,
+    "director": "Hayao Miyazaki",
+    "subtitle": "生きろ。",
+    "description": "女人骑摩托车穿过阳光街道，风吹动头发与衣摆，街边绿植、蓝天白云、温暖小镇，机械与自然和谐共存，清新手绘动画质感",
+    "image": "assets/images/director35.webp",
+    "thumb": "assets/thumbs/director35.webp"
+  },
+  {
+    "id": 36,
+    "director": "Satoshi Kon",
+    "subtitle": "现实与梦境的边界在哪里？",
+    "description": "女人骑摩托车穿过现实与幻觉重叠的街道，广告牌突然变形，镜面反射出现另一个空间，强烈心理感，都市超现实构图，锐利动画电影画面",
+    "image": "assets/images/director36.webp",
+    "thumb": "assets/thumbs/director36.webp"
+  },
+  {
+    "id": 37,
+    "director": "Park Chan-wook",
+    "subtitle": "复仇是冰冷的，但也是甜蜜的。",
+    "description": "女人骑摩托车穿过精致冷艳的街道，深红与墨绿色色调，优雅复仇氛围，构图极端讲究，奢华室外灯光，危险而美丽的电影感",
+    "image": "assets/images/director37.webp",
+    "thumb": "assets/thumbs/director37.webp"
+  },
+  {
+    "id": 38,
+    "director": "Bong Joon-ho",
+    "subtitle": "不是有钱却善良，而是有钱所以善良。",
+    "description": "女人骑摩托车穿过阶层分明的城市街道，一侧是豪宅区一侧是地下街，雨后路面，黑色幽默与社会寓言感，精准构图，冷暖对照",
+    "image": "assets/images/director38.webp",
+    "thumb": "assets/thumbs/director38.webp"
+  },
+  {
+    "id": 39,
+    "director": "Kim Ki-duk",
+    "subtitle": "沉默是这个世界上最响亮的声音。",
+    "description": "女人骑摩托车穿过空旷河边街道，极简空间，冷风，水面反光，人物沉默孤独，象征性构图，低饱和色彩，静谧而压抑的电影画面",
+    "image": "assets/images/director39.webp",
+    "thumb": "assets/thumbs/director39.webp"
+  },
+  {
+    "id": 40,
+    "director": "Pedro Almodóvar",
+    "subtitle": "Todo sobre mi madre.",
+    "description": "女人骑摩托车穿过马德里街道，鲜艳红色、蓝色和黄色墙面，强烈女性气质，戏剧化情绪，时尚服装，明亮饱和色彩，热烈电影画面",
+    "image": "assets/images/director40.webp",
+    "thumb": "assets/thumbs/director40.webp"
+  },
+  {
+    "id": 41,
+    "director": "Guillermo del Toro",
+    "subtitle": "In the darkness, there is always light.",
+    "description": "女人骑摩托车穿过神秘夜街，古老建筑、湿润石板路、金色与蓝绿色灯光，奇幻生物暗影若隐若现，童话与恐怖融合，华丽细节",
+    "image": "assets/images/director41.webp",
+    "thumb": "assets/thumbs/director41.webp"
+  },
+  {
+    "id": 42,
+    "director": "Jean-Luc Godard",
+    "subtitle": "À bout de souffle.",
+    "description": "女人骑摩托车穿过巴黎街道，跳切感构图，红蓝白强色块，新浪潮街拍感，随性叛逆，手持摄影，胶片颗粒，现代主义电影画面",
+    "image": "assets/images/director42.webp",
+    "thumb": "assets/thumbs/director42.webp"
+  },
+  {
+    "id": 43,
+    "director": "François Truffaut",
+    "subtitle": "J'ai une envie de vivre.",
+    "description": "女人骑摩托车穿过浪漫街道，柔和黑白胶片，路边咖啡馆，青春与自由感，轻盈自然的摄影，人物带着即兴情绪，法国新浪潮氛围",
+    "image": "assets/images/director43.webp",
+    "thumb": "assets/thumbs/director43.webp"
+  },
+  {
+    "id": 44,
+    "director": "Agnès Varda",
+    "subtitle": "Sans toit ni loi.",
+    "description": "女人骑摩托车穿过海边小镇街道，温柔纪实感，鲜活色彩，普通人的目光，诗意女性视角，街边花店与海风，亲密而自由的电影画面",
+    "image": "assets/images/director44.webp",
+    "thumb": "assets/thumbs/director44.webp"
+  },
+  {
+    "id": 45,
+    "director": "Michelangelo Antonioni",
+    "subtitle": "L'avventura è dentro di noi.",
+    "description": "女人骑摩托车穿过现代主义空旷街道，巨大建筑立面，人物孤独而渺小，冷静构图，低饱和色彩，存在主义疏离感，静默电影画面",
+    "image": "assets/images/director45.webp",
+    "thumb": "assets/thumbs/director45.webp"
+  },
+  {
+    "id": 46,
+    "director": "Sergio Leone",
+    "subtitle": "There are two kinds of people in this world.",
+    "description": "女人骑摩托车穿过荒凉尘土街道，极端远景与眼部特写感，夕阳逆光，风沙飞扬，西部片张力，孤胆骑士气质，宽银幕电影构图",
+    "image": "assets/images/director46.webp",
+    "thumb": "assets/thumbs/director46.webp"
+  },
+  {
+    "id": 47,
+    "director": "Terrence Malick",
+    "subtitle": "There's a tree of life growing inside each of us.",
+    "description": "女人骑摩托车穿过树影斑驳的街道，黄金时刻自然光，镜头贴近风、光与皮肤，诗意旁白感，柔和广角，生命感与自由感，梦幻写实",
+    "image": "assets/images/director47.webp",
+    "thumb": "assets/thumbs/director47.webp"
+  },
+  {
+    "id": 48,
+    "director": "Denis Villeneuve",
+    "subtitle": "Fear is the mind-killer.",
+    "description": "女人骑摩托车穿过巨大沉默的未来街道，雾霾天空，极简建筑，橙灰色调，宏大尺度，孤独人物，压迫感科幻氛围，冷峻电影摄影",
+    "image": "assets/images/director48.webp",
+    "thumb": "assets/thumbs/director48.webp"
+  },
+  {
+    "id": 49,
+    "director": "Gaspar Noé",
+    "subtitle": "Le temps détruit tout.",
+    "description": "女人骑摩托车穿过霓虹街道，极端红紫灯光，旋转镜头感，强烈眩晕效果，夜店外墙与湿润路面，刺激、不安、迷幻的电影画面",
+    "image": "assets/images/director49.webp",
+    "thumb": "assets/thumbs/director49.webp"
+  },
+  {
+    "id": 50,
+    "director": "Greta Gerwig",
+    "subtitle": "I just want to be whoever I am.",
+    "description": "女人骑摩托车穿过明亮街道，温暖日光，粉色与蓝色城市色彩，青春、自由与自我表达，轻盈构图，现代女性成长电影氛围，清爽高清细节",
+    "image": "assets/images/director50.webp",
+    "thumb": "assets/thumbs/director50.webp"
+  }
+]

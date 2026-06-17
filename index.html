@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Director Motorcycle Cinema</title>
+  <meta name="description" content="A cinematic gallery of fifty director inspired motorcycle images.">
+  <meta name="theme-color" content="#11100e">
+  <link rel="preload" as="image" href="assets/images/director01.webp">
+  <style>
+    :root {
+      --ink: #f4efe5;
+      --muted: #a99d8c;
+      --paper: #151310;
+      --panel: #1d1915;
+      --panel-soft: #262018;
+      --line: rgba(244, 239, 229, .16);
+      --accent: #a8362d;
+      --accent-soft: rgba(168, 54, 45, .24);
+      --shadow: rgba(0, 0, 0, .46);
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 50% -20%, rgba(168, 54, 45, .22), transparent 36rem),
+        radial-gradient(circle at 0% 20%, rgba(244, 239, 229, .08), transparent 26rem),
+        linear-gradient(180deg, #11100e 0%, #191510 48%, #0f0e0c 100%);
+      color: var(--ink);
+      font-family: Optima, Candara, "Avenir Next", system-ui, sans-serif;
+      min-height: 100dvh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 20;
+      opacity: .22;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 3px 3px, 3px 3px;
+      mix-blend-mode: overlay;
+    }
+
+    a { color: inherit; }
+
+    .site-shell { width: min(1440px, calc(100% - 64px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(17, 16, 14, .78);
+      backdrop-filter: blur(18px) saturate(130%);
+    }
+
+    .nav-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+    }
+
+    .nav-links { display: flex; gap: 8px; align-items: center; }
+
+    .filter-button {
+      appearance: none;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+      transition: color .25s ease, border-color .25s ease, background .25s ease, transform .25s ease;
+      white-space: nowrap;
+    }
+
+    .filter-button:hover, .filter-button[aria-pressed="true"] {
+      color: var(--ink);
+      border-color: var(--line);
+      background: rgba(244, 239, 229, .06);
+    }
+
+    .filter-button:active { transform: translateY(1px); }
+
+    .hero {
+      min-height: calc(100dvh - 68px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, .92fr);
+      gap: clamp(28px, 4vw, 70px);
+      align-items: center;
+      padding: 48px 0 64px;
+    }
+
+    .hero-copy { max-width: 650px; }
+
+    .kicker {
+      display: inline-block;
+      color: var(--muted);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(44px, 5.8vw, 88px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      max-width: 12ch;
+    }
+
+    .hero-copy p {
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: clamp(17px, 1.6vw, 22px);
+      line-height: 1.55;
+      max-width: 35rem;
+    }
+
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(244, 239, 229, .06);
+      transition: background .25s ease, transform .25s ease, border-color .25s ease;
+      white-space: nowrap;
+    }
+
+    .button.primary { background: var(--accent); border-color: rgba(244,239,229,.1); }
+    .button:hover { background: rgba(244, 239, 229, .11); }
+    .button.primary:hover { background: #bd4238; }
+    .button:active { transform: translateY(1px); }
+
+    .hero-stage {
+      position: relative;
+      min-height: 470px;
+      display: grid;
+      place-items: center;
+      perspective: 1200px;
+    }
+
+    .hero-stage::before {
+      content: "";
+      position: absolute;
+      inset: 8% 4% 0;
+      background: radial-gradient(circle at 50% 15%, rgba(244,239,229,.24), transparent 18rem), linear-gradient(180deg, rgba(168,54,45,.18), transparent 70%);
+      filter: blur(18px);
+      opacity: .82;
+    }
+
+    .marquee-frame {
+      position: relative;
+      width: min(100%, 760px);
+      border: 1px solid rgba(244, 239, 229, .22);
+      border-radius: 18px;
+      padding: 12px;
+      background: linear-gradient(135deg, rgba(244,239,229,.1), rgba(244,239,229,.035));
+      box-shadow: 0 40px 100px var(--shadow);
+      transform: rotateY(-7deg) rotateX(3deg);
+    }
+
+    .marquee-frame img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      filter: saturate(.96) contrast(1.04);
+    }
+
+    .marquee-caption {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      max-width: 58%;
+      padding: 14px 16px;
+      border: 1px solid rgba(244,239,229,.18);
+      border-radius: 12px;
+      background: rgba(17, 16, 14, .72);
+      backdrop-filter: blur(12px);
+    }
+
+    .marquee-caption strong { display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 22px; }
+    .marquee-caption span { display: block; color: var(--muted); font-size: 13px; margin-top: 5px; }
+
+    .program { padding: 20px 0 56px; border-top: 1px solid var(--line); }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+      gap: 32px;
+      align-items: end;
+      margin: 0 0 34px;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 62px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+
+    .section-head p { margin: 0; color: var(--muted); line-height: 1.65; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .frame-card {
+      grid-column: span 4;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(244,239,229,.055), rgba(244,239,229,.025));
+      box-shadow: 0 18px 54px rgba(0,0,0,.22);
+      transform: translateY(18px);
+      opacity: 0;
+      transition: opacity .7s ease, transform .7s ease, border-color .25s ease;
+    }
+
+    .frame-card.is-visible { opacity: 1; transform: translateY(0); }
+    .frame-card.is-hidden { display: none; }
+    .frame-card:nth-child(5n + 1) { grid-column: span 5; }
+    .frame-card:nth-child(7n + 3) { grid-column: span 7; }
+    .frame-card:hover { border-color: rgba(244,239,229,.34); }
+
+    .poster-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+      overflow: hidden;
+    }
+
+    .poster-button img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transition: transform .6s cubic-bezier(.16, 1, .3, 1), filter .6s ease;
+    }
+
+    .frame-card:hover img { transform: scale(1.035); filter: saturate(1.04) contrast(1.05); }
+
+    .card-copy { padding: 18px 18px 20px; }
+    .frame-number { color: var(--accent); font-size: 12px; letter-spacing: .14em; }
+    .card-copy h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      margin: 8px 0 8px;
+      letter-spacing: -.025em;
+      font-size: clamp(22px, 2vw, 32px);
+    }
+    .card-copy p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      display: none;
+      place-items: center;
+      padding: 26px;
+      background: rgba(9, 8, 7, .88);
+      backdrop-filter: blur(22px);
+    }
+
+    .lightbox.is-open { display: grid; }
+    .lightbox-panel { width: min(1280px, 100%); }
+    .lightbox img {
+      display: block;
+      width: 100%;
+      max-height: 78dvh;
+      object-fit: contain;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #0d0c0b;
+    }
+    .lightbox-copy { display: flex; justify-content: space-between; gap: 24px; align-items: start; padding-top: 14px; }
+    .lightbox-copy h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 26px; }
+    .lightbox-copy p { margin: 5px 0 0; color: var(--muted); }
+    .close-button {
+      appearance: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(244,239,229,.08);
+      color: var(--ink);
+      padding: 11px 16px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .footer { padding: 64px 0 44px; color: var(--muted); }
+    .footer-inner { border-top: 1px solid var(--line); padding-top: 24px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+    @media (max-width: 1120px) {
+      .nav-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .nav-links { width: 100%; overflow-x: auto; padding-bottom: 3px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 46px; }
+      h1 { max-width: 13ch; }
+      .hero-stage { min-height: auto; }
+      .marquee-frame { transform: none; width: min(100%, 820px); }
+      .section-head { grid-template-columns: 1fr; }
+      .frame-card, .frame-card:nth-child(5n + 1), .frame-card:nth-child(7n + 3) { grid-column: span 6; }
+    }
+
+    @media (max-width: 680px) {
+      .site-shell { width: min(100% - 28px, 1440px); }
+      .nav-inner { align-items: start; flex-direction: column; padding: 14px 0; }
+      .nav-links { width: 100%; overflow-x: auto; padding-bottom: 3px; }
+      .hero { padding: 40px 0 56px; }
+      .hero-copy p { font-size: 16px; }
+      .marquee-caption { position: static; max-width: none; margin-top: 10px; }
+      .gallery { gap: 14px; }
+      .frame-card, .frame-card:nth-child(5n + 1), .frame-card:nth-child(7n + 3) { grid-column: 1 / -1; }
+      .lightbox { padding: 14px; }
+      .lightbox-copy { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .frame-card { opacity: 1; transform: none; }
+      .poster-button img { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="site-shell nav-inner">
+      <a class="brand" href="#top" aria-label="Director Motorcycle Cinema home"><span class="brand-mark">D</span><span>Director Motorcycle Cinema</span></a>
+      <nav class="nav-links" aria-label="Gallery filters">
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All frames</button>
+        <button class="filter-button" type="button" data-filter="chinese" aria-pressed="false">Chinese language</button>
+        <button class="filter-button" type="button" data-filter="asia" aria-pressed="false">Asian masters</button>
+        <button class="filter-button" type="button" data-filter="global" aria-pressed="false">Global cinema</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="site-shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <span class="kicker">Fifty frames in a private screening room</span>
+        <h1 id="hero-title">Motorcycle dreams, frame by frame.</h1>
+        <p>A restrained gallery for fifty cinematic images: women, motorcycles, city light, and the visual grammar of world cinema.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#program">Enter gallery</a>
+          <a class="button" href="manifest.json">View manifest</a>
+        </div>
+      </div>
+      <div class="hero-stage reveal">
+        <figure class="marquee-frame">
+          <img src="assets/images/director02.webp" alt="Featured rainy neon motorcycle frame inspired by Wong Kar-wai" width="1800" height="1013">
+          <figcaption class="marquee-caption"><strong>Private screening</strong><span>50 images, ordered as a cinema program</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="site-shell program" id="program" aria-labelledby="program-title">
+      <div class="section-head reveal">
+        <h2 id="program-title">The full program</h2>
+        <p>Open any still to view it large. The layout changes rhythm like a wall of lobby cards, but keeps every frame in numerical order.</p>
+      </div>
+      <div class="gallery" id="gallery">
+        <article class="frame-card reveal" data-section="chinese" data-director="张艺谋" data-id="1">
+  <button class="poster-button" type="button" aria-label="Open frame 01, 张艺谋">
+    <img src="assets/thumbs/director01.webp" data-full="assets/images/director01.webp" alt="Frame 01 inspired by 张艺谋" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">01</span>
+    <h2>张艺谋</h2>
+    <p>女人骑着黑色摩托车穿过古城街道，浓烈红色灯笼与金黄色墙面，强对比色彩，大面积留白，庄重对称构图，尘土飞扬，史诗感，电影级光影，高清细节</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="王家卫" data-id="2">
+  <button class="poster-button" type="button" aria-label="Open frame 02, 王家卫">
+    <img src="assets/thumbs/director02.webp" data-full="assets/images/director02.webp" alt="Frame 02 inspired by 王家卫" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">02</span>
+    <h2>王家卫</h2>
+    <p>女人骑着复古摩托车穿过雨夜香港街道，霓虹灯反射在湿润路面，慢门拖影，绿色与红色霓虹交错，孤独浪漫氛围，窄巷构图，胶片颗粒，电影截图感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="李安" data-id="3">
+  <button class="poster-button" type="button" aria-label="Open frame 03, 李安">
+    <img src="assets/thumbs/director03.webp" data-full="assets/images/director03.webp" alt="Frame 03 inspired by 李安" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">03</span>
+    <h2>李安</h2>
+    <p>女人骑摩托车穿过安静街道，城市与自然边界交融，克制情绪，柔和自然光，细腻人物表情，真实生活质感，优雅构图，温柔电影摄影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="陈凯歌" data-id="4">
+  <button class="poster-button" type="button" aria-label="Open frame 04, 陈凯歌">
+    <img src="assets/thumbs/director04.webp" data-full="assets/images/director04.webp" alt="Frame 04 inspired by 陈凯歌" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">04</span>
+    <h2>陈凯歌</h2>
+    <p>女人骑着摩托车穿过旧北京街道，戏剧化光影，传统建筑与现代交通工具对比，人物带有命运感，宽银幕构图，厚重色彩，历史与现实交错，电影级画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="贾樟柯" data-id="5">
+  <button class="poster-button" type="button" aria-label="Open frame 05, 贾樟柯">
+    <img src="assets/thumbs/director05.webp" data-full="assets/images/director05.webp" alt="Frame 05 inspired by 贾樟柯" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">05</span>
+    <h2>贾樟柯</h2>
+    <p>女人骑摩托车穿过中国小城街道，灰蓝天空，旧广告牌，水泥楼房，真实纪实感，冷静长镜头构图，普通街景中的孤独人物，低饱和色彩，社会现实主义摄影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="侯孝贤" data-id="6">
+  <button class="poster-button" type="button" aria-label="Open frame 06, 侯孝贤">
+    <img src="assets/thumbs/director06.webp" data-full="assets/images/director06.webp" alt="Frame 06 inspired by 侯孝贤" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">06</span>
+    <h2>侯孝贤</h2>
+    <p>女人骑摩托车缓慢穿过老街，远景固定机位，柔和自然光，生活化街边摊与斑驳墙面，人物被环境包围，安静克制，诗意现实主义，胶片质感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="杨德昌" data-id="7">
+  <button class="poster-button" type="button" aria-label="Open frame 07, 杨德昌">
+    <img src="assets/thumbs/director07.webp" data-full="assets/images/director07.webp" alt="Frame 07 inspired by 杨德昌" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">07</span>
+    <h2>杨德昌</h2>
+    <p>女人骑摩托车穿过台北现代街道，都市秩序感，玻璃建筑与复杂路口，冷静构图，人物显得疏离，淡雅色彩，理性而孤独的城市电影感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="杜琪峰" data-id="8">
+  <button class="poster-button" type="button" aria-label="Open frame 08, 杜琪峰">
+    <img src="assets/thumbs/director08.webp" data-full="assets/images/director08.webp" alt="Frame 08 inspired by 杜琪峰" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">08</span>
+    <h2>杜琪峰</h2>
+    <p>女人骑摩托车穿过夜晚街道，硬朗黑色皮衣，冷蓝路灯，强烈明暗对比，街角暗处有紧张感，精准几何构图，香港犯罪片氛围，锐利电影光影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="徐克" data-id="9">
+  <button class="poster-button" type="button" aria-label="Open frame 09, 徐克">
+    <img src="assets/thumbs/director09.webp" data-full="assets/images/director09.webp" alt="Frame 09 inspired by 徐克" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">09</span>
+    <h2>徐克</h2>
+    <p>女人骑摩托车冲过充满风沙和霓虹的街道，夸张动势，广角镜头，衣摆飞扬，现代武侠感，强烈色彩，戏剧化烟雾，速度感，奇幻动作电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="关锦鹏" data-id="10">
+  <button class="poster-button" type="button" aria-label="Open frame 10, 关锦鹏">
+    <img src="assets/thumbs/director10.webp" data-full="assets/images/director10.webp" alt="Frame 10 inspired by 关锦鹏" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">10</span>
+    <h2>关锦鹏</h2>
+    <p>女人骑摩托车穿过夜色街道，柔美灯光，复古服装，情绪化面部特写，怀旧都市氛围，细腻女性视角，淡淡忧伤，暖色胶片质感，优雅电影摄影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="姜文" data-id="11">
+  <button class="poster-button" type="button" aria-label="Open frame 11, 姜文">
+    <img src="assets/thumbs/director11.webp" data-full="assets/images/director11.webp" alt="Frame 11 inspired by 姜文" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">11</span>
+    <h2>姜文</h2>
+    <p>女人骑摩托车穿过烈日下的街道，强烈阳光，高饱和暖色，夸张透视，荒诞幽默气质，人物自信张扬，尘土与红墙，粗粝而有力量的电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="毕赣" data-id="12">
+  <button class="poster-button" type="button" aria-label="Open frame 12, 毕赣">
+    <img src="assets/thumbs/director12.webp" data-full="assets/images/director12.webp" alt="Frame 12 inspired by 毕赣" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">12</span>
+    <h2>毕赣</h2>
+    <p>女人骑摩托车穿过潮湿夜晚的山城街道，梦境般长镜头感，绿色霓虹，烟雾，楼梯与隧道交错，现实与幻觉模糊，诗意迷离，低照度电影摄影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="娄烨" data-id="13">
+  <button class="poster-button" type="button" aria-label="Open frame 13, 娄烨">
+    <img src="assets/thumbs/director13.webp" data-full="assets/images/director13.webp" alt="Frame 13 inspired by 娄烨" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">13</span>
+    <h2>娄烨</h2>
+    <p>女人骑摩托车穿过拥挤潮湿的城市街道，手持摄影感，失焦灯光，人物情绪强烈，混乱而亲密的都市空间，低饱和色彩，真实而躁动的电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="胡金铨" data-id="14">
+  <button class="poster-button" type="button" aria-label="Open frame 14, 胡金铨">
+    <img src="assets/thumbs/director14.webp" data-full="assets/images/director14.webp" alt="Frame 14 inspired by 胡金铨" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">14</span>
+    <h2>胡金铨</h2>
+    <p>女人骑摩托车穿过古老城门街道，传统武侠构图，飞扬尘土，远山与屋檐剪影，人物姿态英气，古典东方美学与现代摩托车融合，庄严宽银幕画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="蔡明亮" data-id="15">
+  <button class="poster-button" type="button" aria-label="Open frame 15, 蔡明亮">
+    <img src="assets/thumbs/director15.webp" data-full="assets/images/director15.webp" alt="Frame 15 inspired by 蔡明亮" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">15</span>
+    <h2>蔡明亮</h2>
+    <p>女人骑摩托车穿过空旷潮湿街道，几乎没有行人，静止长镜头感，水渍地面，孤独人物，冷色调，城市荒凉感，极简构图，沉默电影氛围</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="吴宇森" data-id="16">
+  <button class="poster-button" type="button" aria-label="Open frame 16, 吴宇森">
+    <img src="assets/thumbs/director16.webp" data-full="assets/images/director16.webp" alt="Frame 16 inspired by 吴宇森" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">16</span>
+    <h2>吴宇森</h2>
+    <p>女人骑摩托车高速穿过枪战后的街道，白鸽掠过，慢动作，风衣飞扬，火光与烟雾，英雄主义姿态，强烈逆光，动作片电影级构图</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="许鞍华" data-id="17">
+  <button class="poster-button" type="button" aria-label="Open frame 17, 许鞍华">
+    <img src="assets/thumbs/director17.webp" data-full="assets/images/director17.webp" alt="Frame 17 inspired by 许鞍华" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">17</span>
+    <h2>许鞍华</h2>
+    <p>女人骑摩托车穿过普通社区街道，温和自然光，真实市井生活，街边老人和小店，人物平静而坚韧，生活质感强，柔和写实电影摄影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="冯小刚" data-id="18">
+  <button class="poster-button" type="button" aria-label="Open frame 18, 冯小刚">
+    <img src="assets/thumbs/director18.webp" data-full="assets/images/director18.webp" alt="Frame 18 inspired by 冯小刚" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">18</span>
+    <h2>冯小刚</h2>
+    <p>女人骑摩托车穿过热闹城市街道，现实生活喜剧氛围，街边广告牌，人群表情丰富，暖色自然光，轻微荒诞感，现代都市电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="宁浩" data-id="19">
+  <button class="poster-button" type="button" aria-label="Open frame 19, 宁浩">
+    <img src="assets/thumbs/director19.webp" data-full="assets/images/director19.webp" alt="Frame 19 inspired by 宁浩" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">19</span>
+    <h2>宁浩</h2>
+    <p>女人骑摩托车穿过混乱街道，夸张广角，路边摊、广告牌、车辆拥堵，黑色幽默感，强烈动势，饱和色彩，市井犯罪喜剧电影风格</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="田壮壮" data-id="20">
+  <button class="poster-button" type="button" aria-label="Open frame 20, 田壮壮">
+    <img src="assets/thumbs/director20.webp" data-full="assets/images/director20.webp" alt="Frame 20 inspired by 田壮壮" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">20</span>
+    <h2>田壮壮</h2>
+    <p>女人骑摩托车穿过辽阔边地街道，远山、风沙、空旷道路，人物渺小而坚定，自然光，民族与土地气息，沉静宽银幕构图，史诗现实主义</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Stanley Kubrick" data-id="21">
+  <button class="poster-button" type="button" aria-label="Open frame 21, Stanley Kubrick">
+    <img src="assets/thumbs/director21.webp" data-full="assets/images/director21.webp" alt="Frame 21 inspired by Stanley Kubrick" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">21</span>
+    <h2>Stanley Kubrick</h2>
+    <p>女人骑摩托车穿过极度对称的城市街道，中央透视构图，冷峻几何空间，干净白色建筑，强控制感，神秘疏离氛围，精密电影摄影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Alfred Hitchcock" data-id="22">
+  <button class="poster-button" type="button" aria-label="Open frame 22, Alfred Hitchcock">
+    <img src="assets/thumbs/director22.webp" data-full="assets/images/director22.webp" alt="Frame 22 inspired by Alfred Hitchcock" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">22</span>
+    <h2>Alfred Hitchcock</h2>
+    <p>女人骑摩托车穿过安静街道，背后建筑窗户暗藏窥视感，悬疑气氛，优雅但紧张的构图，阴影斜切路面，经典惊悚电影光影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Akira Kurosawa" data-id="23">
+  <button class="poster-button" type="button" aria-label="Open frame 23, Akira Kurosawa">
+    <img src="assets/thumbs/director23.webp" data-full="assets/images/director23.webp" alt="Frame 23 inspired by Akira Kurosawa" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">23</span>
+    <h2>Akira Kurosawa</h2>
+    <p>女人骑摩托车穿过狂风暴雨中的街道，强烈天气元素，黑白高对比，尘土与雨水飞溅，人物姿态坚毅，武士片般的史诗动势，宽银幕构图</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Federico Fellini" data-id="24">
+  <button class="poster-button" type="button" aria-label="Open frame 24, Federico Fellini">
+    <img src="assets/thumbs/director24.webp" data-full="assets/images/director24.webp" alt="Frame 24 inspired by Federico Fellini" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">24</span>
+    <h2>Federico Fellini</h2>
+    <p>女人骑摩托车穿过梦幻般的夜间街道，夸张人物、马戏团式灯光、喷泉与古典建筑，荒诞又华丽，超现实都市游行感，黑白胶片质感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Andrei Tarkovsky" data-id="25">
+  <button class="poster-button" type="button" aria-label="Open frame 25, Andrei Tarkovsky">
+    <img src="assets/thumbs/director25.webp" data-full="assets/images/director25.webp" alt="Frame 25 inspired by Andrei Tarkovsky" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">25</span>
+    <h2>Andrei Tarkovsky</h2>
+    <p>女人骑摩托车穿过积水街道，雾气、废墟、湿润地面反光，时间缓慢流动，诗意孤独，低饱和自然光，冥想式电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Martin Scorsese" data-id="26">
+  <button class="poster-button" type="button" aria-label="Open frame 26, Martin Scorsese">
+    <img src="assets/thumbs/director26.webp" data-full="assets/images/director26.webp" alt="Frame 26 inspired by Martin Scorsese" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">26</span>
+    <h2>Martin Scorsese</h2>
+    <p>女人骑摩托车穿过纽约夜街，红色尾灯、黄色出租车、湿润柏油路，强烈都市能量，动态跟拍感，犯罪片张力，霓虹与阴影交错</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Francis Ford Coppola" data-id="27">
+  <button class="poster-button" type="button" aria-label="Open frame 27, Francis Ford Coppola">
+    <img src="assets/thumbs/director27.webp" data-full="assets/images/director27.webp" alt="Frame 27 inspired by Francis Ford Coppola" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">27</span>
+    <h2>Francis Ford Coppola</h2>
+    <p>女人骑摩托车穿过昏黄街道，深色阴影，古典构图，家族史诗般厚重气氛，暖色路灯，人物神情冷静，庄重电影质感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Steven Spielberg" data-id="28">
+  <button class="poster-button" type="button" aria-label="Open frame 28, Steven Spielberg">
+    <img src="assets/thumbs/director28.webp" data-full="assets/images/director28.webp" alt="Frame 28 inspired by Steven Spielberg" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">28</span>
+    <h2>Steven Spielberg</h2>
+    <p>女人骑摩托车穿过街道，夕阳逆光，镜头带有冒险感，街边孩子回头注视，温暖金色光线，充满奇遇与希望，经典好莱坞电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Ridley Scott" data-id="29">
+  <button class="poster-button" type="button" aria-label="Open frame 29, Ridley Scott">
+    <img src="assets/thumbs/director29.webp" data-full="assets/images/director29.webp" alt="Frame 29 inspired by Ridley Scott" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">29</span>
+    <h2>Ridley Scott</h2>
+    <p>女人骑摩托车穿过未来雨夜街道，巨大广告屏、蓝绿色霓虹、烟雾、工业建筑，赛博朋克氛围，强烈背光，硬核科幻电影质感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="David Fincher" data-id="30">
+  <button class="poster-button" type="button" aria-label="Open frame 30, David Fincher">
+    <img src="assets/thumbs/director30.webp" data-full="assets/images/director30.webp" alt="Frame 30 inspired by David Fincher" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">30</span>
+    <h2>David Fincher</h2>
+    <p>女人骑摩托车穿过阴暗城市街道，冷绿色调，潮湿混凝土，精密构图，低调光，悬疑与危险感，锐利数字电影摄影，暗黑现代都市</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="chinese" data-director="Quentin Tarantino" data-id="31">
+  <button class="poster-button" type="button" aria-label="Open frame 31, Quentin Tarantino">
+    <img src="assets/thumbs/director31.webp" data-full="assets/images/director31.webp" alt="Frame 31 inspired by Quentin Tarantino" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">31</span>
+    <h2>Quentin Tarantino</h2>
+    <p>女人骑摩托车穿过阳光街道，复古服装，强烈黄色与红色，低机位仰拍，酷感十足，暴力美学暗示，70年代电影海报感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Christopher Nolan" data-id="32">
+  <button class="poster-button" type="button" aria-label="Open frame 32, Christopher Nolan">
+    <img src="assets/thumbs/director32.webp" data-full="assets/images/director32.webp" alt="Frame 32 inspired by Christopher Nolan" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">32</span>
+    <h2>Christopher Nolan</h2>
+    <p>女人骑摩托车穿过巨大城市街道，高楼形成压迫透视，冷蓝灰色调，IMAX 宽银幕感，现实主义动作场面，强烈速度与命运感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Wes Anderson" data-id="33">
+  <button class="poster-button" type="button" aria-label="Open frame 33, Wes Anderson">
+    <img src="assets/thumbs/director33.webp" data-full="assets/images/director33.webp" alt="Frame 33 inspired by Wes Anderson" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">33</span>
+    <h2>Wes Anderson</h2>
+    <p>女人骑摩托车穿过粉彩色街道，完全对称构图，复古招牌，整齐建筑立面，人物正面居中，柔和色彩，精致模型感，幽默童话电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Tim Burton" data-id="34">
+  <button class="poster-button" type="button" aria-label="Open frame 34, Tim Burton">
+    <img src="assets/thumbs/director34.webp" data-full="assets/images/director34.webp" alt="Frame 34 inspired by Tim Burton" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">34</span>
+    <h2>Tim Burton</h2>
+    <p>女人骑摩托车穿过哥特式街道，扭曲建筑、黑白条纹、紫色夜空，怪诞浪漫气质，苍白月光，奇异但优雅，暗黑童话电影感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="asia" data-director="Hayao Miyazaki" data-id="35">
+  <button class="poster-button" type="button" aria-label="Open frame 35, Hayao Miyazaki">
+    <img src="assets/thumbs/director35.webp" data-full="assets/images/director35.webp" alt="Frame 35 inspired by Hayao Miyazaki" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">35</span>
+    <h2>Hayao Miyazaki</h2>
+    <p>女人骑摩托车穿过阳光街道，风吹动头发与衣摆，街边绿植、蓝天白云、温暖小镇，机械与自然和谐共存，清新手绘动画质感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="asia" data-director="Satoshi Kon" data-id="36">
+  <button class="poster-button" type="button" aria-label="Open frame 36, Satoshi Kon">
+    <img src="assets/thumbs/director36.webp" data-full="assets/images/director36.webp" alt="Frame 36 inspired by Satoshi Kon" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">36</span>
+    <h2>Satoshi Kon</h2>
+    <p>女人骑摩托车穿过现实与幻觉重叠的街道，广告牌突然变形，镜面反射出现另一个空间，强烈心理感，都市超现实构图，锐利动画电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="asia" data-director="Park Chan-wook" data-id="37">
+  <button class="poster-button" type="button" aria-label="Open frame 37, Park Chan-wook">
+    <img src="assets/thumbs/director37.webp" data-full="assets/images/director37.webp" alt="Frame 37 inspired by Park Chan-wook" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">37</span>
+    <h2>Park Chan-wook</h2>
+    <p>女人骑摩托车穿过精致冷艳的街道，深红与墨绿色色调，优雅复仇氛围，构图极端讲究，奢华室外灯光，危险而美丽的电影感</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="asia" data-director="Bong Joon-ho" data-id="38">
+  <button class="poster-button" type="button" aria-label="Open frame 38, Bong Joon-ho">
+    <img src="assets/thumbs/director38.webp" data-full="assets/images/director38.webp" alt="Frame 38 inspired by Bong Joon-ho" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">38</span>
+    <h2>Bong Joon-ho</h2>
+    <p>女人骑摩托车穿过阶层分明的城市街道，一侧是豪宅区一侧是地下街，雨后路面，黑色幽默与社会寓言感，精准构图，冷暖对照</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="asia" data-director="Kim Ki-duk" data-id="39">
+  <button class="poster-button" type="button" aria-label="Open frame 39, Kim Ki-duk">
+    <img src="assets/thumbs/director39.webp" data-full="assets/images/director39.webp" alt="Frame 39 inspired by Kim Ki-duk" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">39</span>
+    <h2>Kim Ki-duk</h2>
+    <p>女人骑摩托车穿过空旷河边街道，极简空间，冷风，水面反光，人物沉默孤独，象征性构图，低饱和色彩，静谧而压抑的电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Pedro Almodóvar" data-id="40">
+  <button class="poster-button" type="button" aria-label="Open frame 40, Pedro Almodóvar">
+    <img src="assets/thumbs/director40.webp" data-full="assets/images/director40.webp" alt="Frame 40 inspired by Pedro Almodóvar" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">40</span>
+    <h2>Pedro Almodóvar</h2>
+    <p>女人骑摩托车穿过马德里街道，鲜艳红色、蓝色和黄色墙面，强烈女性气质，戏剧化情绪，时尚服装，明亮饱和色彩，热烈电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Guillermo del Toro" data-id="41">
+  <button class="poster-button" type="button" aria-label="Open frame 41, Guillermo del Toro">
+    <img src="assets/thumbs/director41.webp" data-full="assets/images/director41.webp" alt="Frame 41 inspired by Guillermo del Toro" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">41</span>
+    <h2>Guillermo del Toro</h2>
+    <p>女人骑摩托车穿过神秘夜街，古老建筑、湿润石板路、金色与蓝绿色灯光，奇幻生物暗影若隐若现，童话与恐怖融合，华丽细节</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Jean-Luc Godard" data-id="42">
+  <button class="poster-button" type="button" aria-label="Open frame 42, Jean-Luc Godard">
+    <img src="assets/thumbs/director42.webp" data-full="assets/images/director42.webp" alt="Frame 42 inspired by Jean-Luc Godard" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">42</span>
+    <h2>Jean-Luc Godard</h2>
+    <p>女人骑摩托车穿过巴黎街道，跳切感构图，红蓝白强色块，新浪潮街拍感，随性叛逆，手持摄影，胶片颗粒，现代主义电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="François Truffaut" data-id="43">
+  <button class="poster-button" type="button" aria-label="Open frame 43, François Truffaut">
+    <img src="assets/thumbs/director43.webp" data-full="assets/images/director43.webp" alt="Frame 43 inspired by François Truffaut" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">43</span>
+    <h2>François Truffaut</h2>
+    <p>女人骑摩托车穿过浪漫街道，柔和黑白胶片，路边咖啡馆，青春与自由感，轻盈自然的摄影，人物带着即兴情绪，法国新浪潮氛围</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Agnès Varda" data-id="44">
+  <button class="poster-button" type="button" aria-label="Open frame 44, Agnès Varda">
+    <img src="assets/thumbs/director44.webp" data-full="assets/images/director44.webp" alt="Frame 44 inspired by Agnès Varda" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">44</span>
+    <h2>Agnès Varda</h2>
+    <p>女人骑摩托车穿过海边小镇街道，温柔纪实感，鲜活色彩，普通人的目光，诗意女性视角，街边花店与海风，亲密而自由的电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Michelangelo Antonioni" data-id="45">
+  <button class="poster-button" type="button" aria-label="Open frame 45, Michelangelo Antonioni">
+    <img src="assets/thumbs/director45.webp" data-full="assets/images/director45.webp" alt="Frame 45 inspired by Michelangelo Antonioni" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">45</span>
+    <h2>Michelangelo Antonioni</h2>
+    <p>女人骑摩托车穿过现代主义空旷街道，巨大建筑立面，人物孤独而渺小，冷静构图，低饱和色彩，存在主义疏离感，静默电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Sergio Leone" data-id="46">
+  <button class="poster-button" type="button" aria-label="Open frame 46, Sergio Leone">
+    <img src="assets/thumbs/director46.webp" data-full="assets/images/director46.webp" alt="Frame 46 inspired by Sergio Leone" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">46</span>
+    <h2>Sergio Leone</h2>
+    <p>女人骑摩托车穿过荒凉尘土街道，极端远景与眼部特写感，夕阳逆光，风沙飞扬，西部片张力，孤胆骑士气质，宽银幕电影构图</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Terrence Malick" data-id="47">
+  <button class="poster-button" type="button" aria-label="Open frame 47, Terrence Malick">
+    <img src="assets/thumbs/director47.webp" data-full="assets/images/director47.webp" alt="Frame 47 inspired by Terrence Malick" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">47</span>
+    <h2>Terrence Malick</h2>
+    <p>女人骑摩托车穿过树影斑驳的街道，黄金时刻自然光，镜头贴近风、光与皮肤，诗意旁白感，柔和广角，生命感与自由感，梦幻写实</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Denis Villeneuve" data-id="48">
+  <button class="poster-button" type="button" aria-label="Open frame 48, Denis Villeneuve">
+    <img src="assets/thumbs/director48.webp" data-full="assets/images/director48.webp" alt="Frame 48 inspired by Denis Villeneuve" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">48</span>
+    <h2>Denis Villeneuve</h2>
+    <p>女人骑摩托车穿过巨大沉默的未来街道，雾霾天空，极简建筑，橙灰色调，宏大尺度，孤独人物，压迫感科幻氛围，冷峻电影摄影</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Gaspar Noé" data-id="49">
+  <button class="poster-button" type="button" aria-label="Open frame 49, Gaspar Noé">
+    <img src="assets/thumbs/director49.webp" data-full="assets/images/director49.webp" alt="Frame 49 inspired by Gaspar Noé" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">49</span>
+    <h2>Gaspar Noé</h2>
+    <p>女人骑摩托车穿过霓虹街道，极端红紫灯光，旋转镜头感，强烈眩晕效果，夜店外墙与湿润路面，刺激、不安、迷幻的电影画面</p>
+  </div>
+</article>
+<article class="frame-card reveal" data-section="global" data-director="Greta Gerwig" data-id="50">
+  <button class="poster-button" type="button" aria-label="Open frame 50, Greta Gerwig">
+    <img src="assets/thumbs/director50.webp" data-full="assets/images/director50.webp" alt="Frame 50 inspired by Greta Gerwig" loading="lazy" width="720" height="405">
+  </button>
+  <div class="card-copy">
+    <span class="frame-number">50</span>
+    <h2>Greta Gerwig</h2>
+    <p>女人骑摩托车穿过明亮街道，温暖日光，粉色与蓝色城市色彩，青春、自由与自我表达，轻盈构图，现代女性成长电影氛围，清爽高清细节</p>
+  </div>
+</article>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="lightbox-panel">
+      <img id="lightboxImage" alt="" src="">
+      <div class="lightbox-copy">
+        <div>
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxText"></p>
+        </div>
+        <button class="close-button" type="button" id="closeLightbox">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-shell footer">
+    <div class="footer-inner">
+      <span>Created as a static cinema gallery.</span>
+      <span>Images compressed for GitHub Pages.</span>
+    </div>
+  </footer>
+
+  <script>
+    const cards = Array.from(document.querySelectorAll('.frame-card'));
+    const filterButtons = Array.from(document.querySelectorAll('.filter-button'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxText = document.getElementById('lightboxText');
+    const closeLightbox = document.getElementById('closeLightbox');
+
+    const observer = new IntersectionObserver((items) => {
+      items.forEach((item) => {
+        if (item.isIntersecting) {
+          item.target.classList.add('is-visible');
+          observer.unobserve(item.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        cards.forEach((card) => {
+          const visible = filter === 'all' || card.dataset.section === filter;
+          card.classList.toggle('is-hidden', !visible);
+          if (visible) card.classList.add('is-visible');
+        });
+      });
+    });
+
+    cards.forEach((card) => {
+      const button = card.querySelector('.poster-button');
+      const image = card.querySelector('img');
+      const title = card.querySelector('h2').textContent;
+      const text = card.querySelector('p').textContent;
+      const number = card.querySelector('.frame-number').textContent;
+      button.addEventListener('click', () => {
+        lightboxImage.src = image.dataset.full;
+        lightboxImage.alt = image.alt;
+        lightboxTitle.textContent = number + '  ' + title;
+        lightboxText.textContent = text;
+        lightbox.classList.add('is-open');
+        closeLightbox.focus();
+      });
+    });
+
+    function closePreview() {
+      lightbox.classList.remove('is-open');
+      lightboxImage.removeAttribute('src');
+    }
+
+    closeLightbox.addEventListener('click', closePreview);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closePreview();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closePreview();
+    });
+  </script>
+</body>
+</html>
