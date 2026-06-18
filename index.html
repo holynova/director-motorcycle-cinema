@@ -1,304 +1,398 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Director Motorcycle Cinema</title><meta name="description" content="50 张导演风格启发的摩托城市影像画廊。"><meta name="theme-color" content="#11100e"><link rel="preload" as="image" href="assets/images/director02.webp"><style>
-:root{--ink:#f4efe5;--muted:#a99d8c;--line:rgba(244,239,229,.16);--accent:#a8362d;--shadow:rgba(0,0,0,.46);color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -20%,rgba(168,54,45,.22),transparent 36rem),radial-gradient(circle at 0% 20%,rgba(244,239,229,.08),transparent 26rem),linear-gradient(180deg,#11100e 0%,#191510 48%,#0f0e0c 100%);color:var(--ink);font-family:Optima,Candara,"Avenir Next",system-ui,sans-serif;min-height:100dvh}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px);background-size:3px 3px;mix-blend-mode:overlay}a{color:inherit}.site-shell{width:min(1440px,calc(100% - 64px));margin:0 auto}.topbar{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(17,16,14,.82);backdrop-filter:blur(18px) saturate(130%)}.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-size:12px;color:var(--muted);white-space:nowrap}.brand-mark{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--ink);font-family:Georgia,serif;font-size:15px}.nav-links{display:flex;gap:8px;align-items:center}.filter-button{appearance:none;border:1px solid transparent;background:transparent;color:var(--muted);border-radius:999px;padding:9px 12px;font:inherit;font-size:12px;cursor:pointer;transition:color .25s ease,border-color .25s ease,background .25s ease,transform .25s ease;white-space:nowrap}.filter-button:hover,.filter-button[aria-pressed=true]{color:var(--ink);border-color:var(--line);background:rgba(244,239,229,.06)}.hero{min-height:calc(100dvh - 68px);display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);gap:clamp(28px,4vw,70px);align-items:center;padding:48px 0 64px}.hero-copy{max-width:650px}.kicker{display:inline-block;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-size:12px;margin-bottom:22px}h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(44px,5.8vw,88px);line-height:.98;letter-spacing:-.055em;max-width:12ch}.hero-copy p{margin:28px 0 0;color:var(--muted);font-size:clamp(17px,1.6vw,22px);line-height:1.55;max-width:35rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--ink);background:var(--accent);transition:background .25s ease,transform .25s ease}.button:hover{background:#bd4238}.hero-stage{position:relative;min-height:470px;display:grid;place-items:center;perspective:1200px}.hero-stage:before{content:"";position:absolute;inset:8% 4% 0;background:radial-gradient(circle at 50% 15%,rgba(244,239,229,.24),transparent 18rem),linear-gradient(180deg,rgba(168,54,45,.18),transparent 70%);filter:blur(18px);opacity:.82}.marquee-frame{position:relative;width:min(100%,760px);border:1px solid rgba(244,239,229,.22);border-radius:18px;padding:12px;background:linear-gradient(135deg,rgba(244,239,229,.1),rgba(244,239,229,.035));box-shadow:0 40px 100px var(--shadow);transform:rotateY(-7deg) rotateX(3deg)}.marquee-frame img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#0b0a09;border-radius:10px;filter:saturate(.96) contrast(1.04)}.marquee-caption{position:absolute;left:24px;bottom:24px;max-width:58%;padding:14px 16px;border:1px solid rgba(244,239,229,.18);border-radius:12px;background:rgba(17,16,14,.72);backdrop-filter:blur(12px)}.marquee-caption strong{display:block;font-family:Georgia,serif;font-weight:400;font-size:22px}.marquee-caption span{display:block;color:var(--muted);font-size:13px;margin-top:5px}.program{padding:20px 0 56px;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,420px);gap:32px;align-items:end;margin:0 0 34px}.section-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4vw,62px);font-weight:400;line-height:1;letter-spacing:-.04em;margin:0}.section-head p{margin:0;color:var(--muted);line-height:1.65}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}.frame-card{min-width:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:linear-gradient(180deg,rgba(244,239,229,.055),rgba(244,239,229,.025));box-shadow:0 18px 54px rgba(0,0,0,.22);transform:translateY(18px);opacity:0;transition:opacity .7s ease,transform .7s ease,border-color .25s ease;display:flex;flex-direction:column}.frame-card.is-visible{opacity:1;transform:translateY(0)}.frame-card.is-hidden{display:none}.frame-card:hover{border-color:rgba(244,239,229,.34)}.poster-button{display:grid;place-items:center;width:100%;aspect-ratio:3/2;padding:0;border:0;background:#0b0a09;cursor:zoom-in;overflow:hidden}.poster-button img{display:block;width:100%;height:100%;aspect-ratio:3/2;object-fit:contain;background:#0b0a09;transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s ease}.frame-card:hover img{transform:scale(1.015);filter:saturate(1.04) contrast(1.05)}.card-copy{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}.frame-number{color:var(--accent);font-size:12px;letter-spacing:.14em}.card-copy h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;margin:8px 0 8px;letter-spacing:-.025em;font-size:clamp(21px,2vw,30px);line-height:1.1}.card-copy h2 small{display:block;color:var(--muted);font-family:Optima,Candara,"Avenir Next",system-ui,sans-serif;font-size:13px;letter-spacing:.04em;margin-top:6px}.card-copy p{margin:0;color:var(--muted);font-size:14px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.lightbox{position:fixed;inset:0;z-index:30;display:none;place-items:center;padding:26px;background:rgba(9,8,7,.9);backdrop-filter:blur(22px)}.lightbox.is-open{display:grid}.lightbox-panel{width:min(1280px,100%)}.lightbox img{display:block;width:100%;max-height:78dvh;object-fit:contain;border-radius:14px;border:1px solid var(--line);background:#0d0c0b}.lightbox-copy{display:flex;justify-content:space-between;gap:24px;align-items:start;padding-top:14px}.lightbox-copy h3{margin:0;font-family:Georgia,serif;font-weight:400;font-size:26px}.lightbox-copy p{margin:5px 0 0;color:var(--muted)}.close-button{appearance:none;border:1px solid var(--line);border-radius:999px;background:rgba(244,239,229,.08);color:var(--ink);padding:11px 16px;cursor:pointer;white-space:nowrap}.footer{padding:64px 0 44px;color:var(--muted)}.footer-inner{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}@media (max-width:1120px){.nav-inner{align-items:flex-start;flex-direction:column;padding:14px 0}.nav-links{width:100%;overflow-x:auto;padding-bottom:3px}.hero{grid-template-columns:1fr;min-height:auto;padding-top:46px}h1{max-width:13ch}.hero-stage{min-height:auto}.marquee-frame{transform:none;width:min(100%,820px)}.section-head{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:680px){.site-shell{width:min(100% - 28px,1440px)}.brand{font-size:11px}.nav-links{gap:6px}.filter-button{font-size:12px;padding:9px 11px}.hero{padding:34px 0 46px;gap:28px}h1{font-size:clamp(42px,14vw,68px);letter-spacing:-.045em}.hero-copy p{font-size:16px}.hero-actions{margin-top:24px}.marquee-caption{position:static;max-width:none;margin-top:10px}.gallery{grid-template-columns:1fr;gap:14px}.card-copy{padding:16px}.card-copy p{-webkit-line-clamp:4}.lightbox{padding:14px}.lightbox-copy{flex-direction:column;gap:12px}.lightbox-copy h3{font-size:22px}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.frame-card{opacity:1;transform:none}}
-</style></head><body><header class="topbar"><div class="site-shell nav-inner"><a class="brand" href="#top" aria-label="Director Motorcycle Cinema home"><span class="brand-mark">D</span><span>Director Motorcycle Cinema</span></a><nav class="nav-links" aria-label="Gallery filters"><button class="filter-button" type="button" data-filter="all" aria-pressed="true">全部</button><button class="filter-button" type="button" data-filter="chinese" aria-pressed="false">华语导演</button><button class="filter-button" type="button" data-filter="asia" aria-pressed="false">亚洲大师</button><button class="filter-button" type="button" data-filter="global" aria-pressed="false">世界电影</button></nav></div></header><main id="top"><section class="site-shell hero" aria-labelledby="hero-title"><div class="hero-copy reveal"><span class="kicker">Fifty frames in a private screening room</span><h1 id="hero-title">Motorcycle dreams, frame by frame.</h1><p>一个克制的电影院式画廊：女人、摩托、城市光线，以及 50 位导演启发下的世界电影语法。</p><div class="hero-actions"><a class="button" href="#program">进入放映厅</a></div></div><div class="hero-stage reveal"><figure class="marquee-frame"><img src="assets/images/director02.webp" alt="王家卫 / Wong Kar-wai 风格启发画面" width="1800" height="1200"><figcaption class="marquee-caption"><strong>Private screening</strong><span>50 images, ordered as a cinema program</span></figcaption></figure></div></section><section class="site-shell program" id="program" aria-labelledby="program-title"><div class="section-head reveal"><h2 id="program-title">The full program</h2><p>点击任意画面查看完整大图。所有卡片保持相同尺寸，图片以完整比例展示，不裁剪。</p></div><div class="gallery" id="gallery"><article class="frame-card reveal" data-section="chinese" data-director="张艺谋 / Zhang Yimou" data-id="1">
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Director Motorcycle Cinema</title>
+  <meta name="description" content="50 张导演风格启发的摩托城市影像画廊。">
+  <meta name="theme-color" content="#11100e">
+  <link rel="preload" as="image" href="assets/images/director02.webp">
+  <style>
+:root{--ink:#f4efe5;--muted:#a99d8c;--line:rgba(244,239,229,.16);--accent:#a8362d;--shadow:rgba(0,0,0,.46);color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -20%,rgba(168,54,45,.22),transparent 36rem),radial-gradient(circle at 0% 20%,rgba(244,239,229,.08),transparent 26rem),linear-gradient(180deg,#11100e 0%,#191510 48%,#0f0e0c 100%);color:var(--ink);font-family:Optima,Candara,"Avenir Next",system-ui,sans-serif;min-height:100dvh}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px);background-size:3px 3px;mix-blend-mode:overlay}a{color:inherit}.site-shell{width:min(1440px,calc(100% - 64px));margin:0 auto}.topbar{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(17,16,14,.82);backdrop-filter:blur(18px) saturate(130%)}.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-size:12px;color:var(--muted);white-space:nowrap}.brand-mark{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--ink);font-family:Georgia,serif;font-size:15px}.nav-links{display:flex;gap:8px;align-items:center}.filter-button,.github-link{appearance:none;border:1px solid transparent;background:transparent;color:var(--muted);border-radius:999px;padding:9px 12px;font:inherit;font-size:12px;cursor:pointer;transition:color .25s ease,border-color .25s ease,background .25s ease;white-space:nowrap;text-decoration:none}.filter-button:hover,.filter-button[aria-pressed=true],.github-link:hover{color:var(--ink);border-color:var(--line);background:rgba(244,239,229,.06)}.github-link{border-color:var(--line)}.hero{min-height:calc(100dvh - 68px);display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);gap:clamp(28px,4vw,70px);align-items:center;padding:48px 0 64px}.hero-copy{max-width:650px}.kicker{display:inline-block;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-size:12px;margin-bottom:22px}h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(44px,5.8vw,88px);line-height:.98;letter-spacing:-.055em;max-width:12ch}.hero-copy p{margin:28px 0 0;color:var(--muted);font-size:clamp(17px,1.6vw,22px);line-height:1.55;max-width:35rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--ink);background:var(--accent);transition:background .25s ease}.button.secondary{background:rgba(244,239,229,.06)}.button:hover{background:#bd4238}.button.secondary:hover{background:rgba(244,239,229,.11)}.hero-stage{position:relative;min-height:470px;display:grid;place-items:center;perspective:1200px}.hero-stage:before{content:"";position:absolute;inset:8% 4% 0;background:radial-gradient(circle at 50% 15%,rgba(244,239,229,.24),transparent 18rem),linear-gradient(180deg,rgba(168,54,45,.18),transparent 70%);filter:blur(18px);opacity:.82}.marquee-frame{position:relative;width:min(100%,760px);border:0;border-radius:18px;padding:12px;background:linear-gradient(135deg,rgba(244,239,229,.1),rgba(244,239,229,.035));box-shadow:0 40px 100px var(--shadow);transform:rotateY(-7deg) rotateX(3deg)}.marquee-frame img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#0b0a09;border-radius:10px;filter:saturate(.96) contrast(1.04)}.marquee-caption{position:absolute;left:24px;bottom:24px;max-width:58%;padding:14px 16px;border:0;border-radius:12px;background:rgba(17,16,14,.72);backdrop-filter:blur(12px)}.marquee-caption strong{display:block;font-family:Georgia,serif;font-weight:400;font-size:22px}.marquee-caption span{display:block;color:var(--muted);font-size:13px;margin-top:5px}.program{padding:20px 0 56px;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,420px);gap:32px;align-items:end;margin:0 0 34px}.section-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4vw,62px);font-weight:400;line-height:1;letter-spacing:-.04em;margin:0}.section-head p{margin:0;color:var(--muted);line-height:1.65}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}.frame-card{min-width:0;border:0;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,rgba(244,239,229,.052),rgba(244,239,229,.022));box-shadow:0 18px 54px rgba(0,0,0,.22);transform:translateY(18px);opacity:0;transition:opacity .7s ease,transform .7s ease,background .25s ease;display:flex;flex-direction:column}.frame-card.is-visible{opacity:1;transform:translateY(0)}.frame-card.is-hidden{display:none}.frame-card:hover{background:linear-gradient(180deg,rgba(244,239,229,.075),rgba(244,239,229,.028))}.poster-button{display:grid;place-items:center;width:100%;aspect-ratio:3/2;padding:0;border:0;background:#0b0a09;cursor:zoom-in;overflow:hidden}.poster-button img{display:block;width:100%;height:100%;aspect-ratio:3/2;object-fit:contain;background:#0b0a09;transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s ease}.frame-card:hover img{transform:scale(1.015);filter:saturate(1.04) contrast(1.05)}.card-copy{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}.frame-number{color:var(--accent);font-size:12px;letter-spacing:.14em}.card-copy h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;margin:8px 0 8px;letter-spacing:-.025em;font-size:clamp(21px,2vw,30px);line-height:1.1}.card-copy h2 small{display:block;color:var(--muted);font-family:Optima,Candara,"Avenir Next",system-ui,sans-serif;font-size:13px;letter-spacing:.04em;margin-top:6px}.card-copy p{margin:0;color:var(--muted);font-size:14px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.lightbox{position:fixed;inset:0;z-index:30;display:none;place-items:center;padding:26px;background:rgba(9,8,7,.9);backdrop-filter:blur(22px);touch-action:pan-y}.lightbox.is-open{display:grid}.lightbox-panel{width:min(1280px,100%)}.lightbox img{display:block;width:100%;max-height:78dvh;object-fit:contain;border-radius:14px;background:#0d0c0b;box-shadow:0 24px 90px rgba(0,0,0,.45)}.lightbox-copy{display:flex;justify-content:space-between;gap:24px;align-items:start;padding-top:14px}.lightbox-copy h3{margin:0;font-family:Georgia,serif;font-weight:400;font-size:26px}.lightbox-copy p{margin:5px 0 0;color:var(--muted)}.lightbox-actions{display:flex;gap:8px;align-items:center}.close-button,.nav-button{appearance:none;border:0;border-radius:999px;background:rgba(244,239,229,.11);color:var(--ink);padding:11px 16px;cursor:pointer;white-space:nowrap}.nav-button{min-width:48px}.lightbox-edge{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:72px;border:0;border-radius:999px;background:rgba(244,239,229,.1);color:var(--ink);font-size:30px;cursor:pointer;z-index:31}.lightbox-edge:hover,.close-button:hover,.nav-button:hover{background:rgba(244,239,229,.18)}.lightbox-edge.prev{left:22px}.lightbox-edge.next{right:22px}.footer{padding:64px 0 44px;color:var(--muted)}.footer-inner{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:var(--ink);text-decoration:none}@media (max-width:1120px){.nav-inner{align-items:flex-start;flex-direction:column;padding:14px 0}.nav-links{width:100%;overflow-x:auto;padding-bottom:3px}.hero{grid-template-columns:1fr;min-height:auto;padding-top:46px}h1{max-width:13ch}.hero-stage{min-height:auto}.marquee-frame{transform:none;width:min(100%,820px)}.section-head{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:680px){.site-shell{width:min(100% - 28px,1440px)}.brand{font-size:11px}.nav-links{gap:6px}.filter-button,.github-link{font-size:12px;padding:9px 11px}.hero{padding:34px 0 46px;gap:28px}h1{font-size:clamp(42px,14vw,68px);letter-spacing:-.045em}.hero-copy p{font-size:16px}.hero-actions{margin-top:24px}.marquee-caption{position:static;max-width:none;margin-top:10px}.gallery{grid-template-columns:1fr;gap:14px}.card-copy{padding:16px}.card-copy p{-webkit-line-clamp:4}.lightbox{padding:14px}.lightbox img{max-height:70dvh}.lightbox-copy{flex-direction:column;gap:12px}.lightbox-copy h3{font-size:22px}.lightbox-actions{width:100%;justify-content:space-between}.lightbox-edge{display:none}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.frame-card{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+  <header class="topbar"><div class="site-shell nav-inner"><a class="brand" href="#top" aria-label="Director Motorcycle Cinema home"><span class="brand-mark">D</span><span>Director Motorcycle Cinema</span></a><nav class="nav-links" aria-label="Gallery filters"><button class="filter-button" type="button" data-filter="all" aria-pressed="true">全部</button><button class="filter-button" type="button" data-filter="chinese" aria-pressed="false">华语导演</button><button class="filter-button" type="button" data-filter="asia" aria-pressed="false">亚洲大师</button><button class="filter-button" type="button" data-filter="global" aria-pressed="false">世界电影</button><a class="github-link" href="https://github.com/holynova/director-motorcycle-cinema" target="_blank" rel="noopener">GitHub</a></nav></div></header>
+  <main id="top"><section class="site-shell hero" aria-labelledby="hero-title"><div class="hero-copy reveal"><span class="kicker">Fifty frames in a private screening room</span><h1 id="hero-title">Motorcycle dreams, frame by frame.</h1><p>一个克制的电影院式画廊：女人、摩托、城市光线，以及 50 位导演启发下的世界电影语法。</p><div class="hero-actions"><a class="button" href="#program">进入放映厅</a><a class="button secondary" href="https://github.com/holynova/director-motorcycle-cinema" target="_blank" rel="noopener">GitHub 仓库</a></div></div><div class="hero-stage reveal"><figure class="marquee-frame"><img src="assets/images/director02.webp" alt="王家卫 / Wong Kar-wai 风格启发画面" width="1800" height="1200"><figcaption class="marquee-caption"><strong>Private screening</strong><span>50 images, ordered as a cinema program</span></figcaption></figure></div></section><section class="site-shell program" id="program" aria-labelledby="program-title"><div class="section-head reveal"><h2 id="program-title">The full program</h2><p>点击任意画面查看完整大图。PC 可用键盘 ← / → 或按钮翻页；移动端可左右滑动翻页。</p></div><div class="gallery" id="gallery"><article class="frame-card reveal" data-section="chinese" data-director="张艺谋 / Zhang Yimou" data-index="0" data-id="1">
   <button class="poster-button" type="button" aria-label="打开第 01 张，张艺谋 / Zhang Yimou">
     <img src="assets/thumbs/director01.webp" data-full="assets/images/director01.webp" alt="第 01 张，张艺谋 / Zhang Yimou 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">01</span><h2><span>张艺谋</span><small>Zhang Yimou</small></h2><p>女人骑着黑色摩托车穿过古城街道，浓烈红色灯笼与金黄色墙面，强对比色彩，大面积留白，庄重对称构图，尘土飞扬，史诗感，电影级光影，高清细节</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="王家卫 / Wong Kar-wai" data-id="2">
+<article class="frame-card reveal" data-section="chinese" data-director="王家卫 / Wong Kar-wai" data-index="1" data-id="2">
   <button class="poster-button" type="button" aria-label="打开第 02 张，王家卫 / Wong Kar-wai">
     <img src="assets/thumbs/director02.webp" data-full="assets/images/director02.webp" alt="第 02 张，王家卫 / Wong Kar-wai 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">02</span><h2><span>王家卫</span><small>Wong Kar-wai</small></h2><p>女人骑着复古摩托车穿过雨夜香港街道，霓虹灯反射在湿润路面，慢门拖影，绿色与红色霓虹交错，孤独浪漫氛围，窄巷构图，胶片颗粒，电影截图感</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="李安 / Ang Lee" data-id="3">
+<article class="frame-card reveal" data-section="chinese" data-director="李安 / Ang Lee" data-index="2" data-id="3">
   <button class="poster-button" type="button" aria-label="打开第 03 张，李安 / Ang Lee">
     <img src="assets/thumbs/director03.webp" data-full="assets/images/director03.webp" alt="第 03 张，李安 / Ang Lee 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">03</span><h2><span>李安</span><small>Ang Lee</small></h2><p>女人骑摩托车穿过安静街道，城市与自然边界交融，克制情绪，柔和自然光，细腻人物表情，真实生活质感，优雅构图，温柔电影摄影</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="陈凯歌 / Chen Kaige" data-id="4">
+<article class="frame-card reveal" data-section="chinese" data-director="陈凯歌 / Chen Kaige" data-index="3" data-id="4">
   <button class="poster-button" type="button" aria-label="打开第 04 张，陈凯歌 / Chen Kaige">
     <img src="assets/thumbs/director04.webp" data-full="assets/images/director04.webp" alt="第 04 张，陈凯歌 / Chen Kaige 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">04</span><h2><span>陈凯歌</span><small>Chen Kaige</small></h2><p>女人骑着摩托车穿过旧北京街道，戏剧化光影，传统建筑与现代交通工具对比，人物带有命运感，宽银幕构图，厚重色彩，历史与现实交错，电影级画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="贾樟柯 / Jia Zhangke" data-id="5">
+<article class="frame-card reveal" data-section="chinese" data-director="贾樟柯 / Jia Zhangke" data-index="4" data-id="5">
   <button class="poster-button" type="button" aria-label="打开第 05 张，贾樟柯 / Jia Zhangke">
     <img src="assets/thumbs/director05.webp" data-full="assets/images/director05.webp" alt="第 05 张，贾樟柯 / Jia Zhangke 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">05</span><h2><span>贾樟柯</span><small>Jia Zhangke</small></h2><p>女人骑摩托车穿过中国小城街道，灰蓝天空，旧广告牌，水泥楼房，真实纪实感，冷静长镜头构图，普通街景中的孤独人物，低饱和色彩，社会现实主义摄影</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="侯孝贤 / Hou Hsiao-hsien" data-id="6">
+<article class="frame-card reveal" data-section="chinese" data-director="侯孝贤 / Hou Hsiao-hsien" data-index="5" data-id="6">
   <button class="poster-button" type="button" aria-label="打开第 06 张，侯孝贤 / Hou Hsiao-hsien">
     <img src="assets/thumbs/director06.webp" data-full="assets/images/director06.webp" alt="第 06 张，侯孝贤 / Hou Hsiao-hsien 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">06</span><h2><span>侯孝贤</span><small>Hou Hsiao-hsien</small></h2><p>女人骑摩托车缓慢穿过老街，远景固定机位，柔和自然光，生活化街边摊与斑驳墙面，人物被环境包围，安静克制，诗意现实主义，胶片质感</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="杨德昌 / Edward Yang" data-id="7">
+<article class="frame-card reveal" data-section="chinese" data-director="杨德昌 / Edward Yang" data-index="6" data-id="7">
   <button class="poster-button" type="button" aria-label="打开第 07 张，杨德昌 / Edward Yang">
     <img src="assets/thumbs/director07.webp" data-full="assets/images/director07.webp" alt="第 07 张，杨德昌 / Edward Yang 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">07</span><h2><span>杨德昌</span><small>Edward Yang</small></h2><p>女人骑摩托车穿过台北现代街道，都市秩序感，玻璃建筑与复杂路口，冷静构图，人物显得疏离，淡雅色彩，理性而孤独的城市电影感</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="杜琪峰 / Johnnie To" data-id="8">
+<article class="frame-card reveal" data-section="chinese" data-director="杜琪峰 / Johnnie To" data-index="7" data-id="8">
   <button class="poster-button" type="button" aria-label="打开第 08 张，杜琪峰 / Johnnie To">
     <img src="assets/thumbs/director08.webp" data-full="assets/images/director08.webp" alt="第 08 张，杜琪峰 / Johnnie To 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">08</span><h2><span>杜琪峰</span><small>Johnnie To</small></h2><p>女人骑摩托车穿过夜晚街道，硬朗黑色皮衣，冷蓝路灯，强烈明暗对比，街角暗处有紧张感，精准几何构图，香港犯罪片氛围，锐利电影光影</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="徐克 / Tsui Hark" data-id="9">
+<article class="frame-card reveal" data-section="chinese" data-director="徐克 / Tsui Hark" data-index="8" data-id="9">
   <button class="poster-button" type="button" aria-label="打开第 09 张，徐克 / Tsui Hark">
     <img src="assets/thumbs/director09.webp" data-full="assets/images/director09.webp" alt="第 09 张，徐克 / Tsui Hark 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">09</span><h2><span>徐克</span><small>Tsui Hark</small></h2><p>女人骑摩托车冲过充满风沙和霓虹的街道，夸张动势，广角镜头，衣摆飞扬，现代武侠感，强烈色彩，戏剧化烟雾，速度感，奇幻动作电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="关锦鹏 / Stanley Kwan" data-id="10">
+<article class="frame-card reveal" data-section="chinese" data-director="关锦鹏 / Stanley Kwan" data-index="9" data-id="10">
   <button class="poster-button" type="button" aria-label="打开第 10 张，关锦鹏 / Stanley Kwan">
     <img src="assets/thumbs/director10.webp" data-full="assets/images/director10.webp" alt="第 10 张，关锦鹏 / Stanley Kwan 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">10</span><h2><span>关锦鹏</span><small>Stanley Kwan</small></h2><p>女人骑摩托车穿过夜色街道，柔美灯光，复古服装，情绪化面部特写，怀旧都市氛围，细腻女性视角，淡淡忧伤，暖色胶片质感，优雅电影摄影</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="姜文 / Jiang Wen" data-id="11">
+<article class="frame-card reveal" data-section="chinese" data-director="姜文 / Jiang Wen" data-index="10" data-id="11">
   <button class="poster-button" type="button" aria-label="打开第 11 张，姜文 / Jiang Wen">
     <img src="assets/thumbs/director11.webp" data-full="assets/images/director11.webp" alt="第 11 张，姜文 / Jiang Wen 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">11</span><h2><span>姜文</span><small>Jiang Wen</small></h2><p>女人骑摩托车穿过烈日下的街道，强烈阳光，高饱和暖色，夸张透视，荒诞幽默气质，人物自信张扬，尘土与红墙，粗粝而有力量的电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="毕赣 / Bi Gan" data-id="12">
+<article class="frame-card reveal" data-section="chinese" data-director="毕赣 / Bi Gan" data-index="11" data-id="12">
   <button class="poster-button" type="button" aria-label="打开第 12 张，毕赣 / Bi Gan">
     <img src="assets/thumbs/director12.webp" data-full="assets/images/director12.webp" alt="第 12 张，毕赣 / Bi Gan 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">12</span><h2><span>毕赣</span><small>Bi Gan</small></h2><p>女人骑摩托车穿过潮湿夜晚的山城街道，梦境般长镜头感，绿色霓虹，烟雾，楼梯与隧道交错，现实与幻觉模糊，诗意迷离，低照度电影摄影</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="娄烨 / Lou Ye" data-id="13">
+<article class="frame-card reveal" data-section="chinese" data-director="娄烨 / Lou Ye" data-index="12" data-id="13">
   <button class="poster-button" type="button" aria-label="打开第 13 张，娄烨 / Lou Ye">
     <img src="assets/thumbs/director13.webp" data-full="assets/images/director13.webp" alt="第 13 张，娄烨 / Lou Ye 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">13</span><h2><span>娄烨</span><small>Lou Ye</small></h2><p>女人骑摩托车穿过拥挤潮湿的城市街道，手持摄影感，失焦灯光，人物情绪强烈，混乱而亲密的都市空间，低饱和色彩，真实而躁动的电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="胡金铨 / King Hu" data-id="14">
+<article class="frame-card reveal" data-section="chinese" data-director="胡金铨 / King Hu" data-index="13" data-id="14">
   <button class="poster-button" type="button" aria-label="打开第 14 张，胡金铨 / King Hu">
     <img src="assets/thumbs/director14.webp" data-full="assets/images/director14.webp" alt="第 14 张，胡金铨 / King Hu 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">14</span><h2><span>胡金铨</span><small>King Hu</small></h2><p>女人骑摩托车穿过古老城门街道，传统武侠构图，飞扬尘土，远山与屋檐剪影，人物姿态英气，古典东方美学与现代摩托车融合，庄严宽银幕画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="蔡明亮 / Tsai Ming-liang" data-id="15">
+<article class="frame-card reveal" data-section="chinese" data-director="蔡明亮 / Tsai Ming-liang" data-index="14" data-id="15">
   <button class="poster-button" type="button" aria-label="打开第 15 张，蔡明亮 / Tsai Ming-liang">
     <img src="assets/thumbs/director15.webp" data-full="assets/images/director15.webp" alt="第 15 张，蔡明亮 / Tsai Ming-liang 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">15</span><h2><span>蔡明亮</span><small>Tsai Ming-liang</small></h2><p>女人骑摩托车穿过空旷潮湿街道，几乎没有行人，静止长镜头感，水渍地面，孤独人物，冷色调，城市荒凉感，极简构图，沉默电影氛围</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="吴宇森 / John Woo" data-id="16">
+<article class="frame-card reveal" data-section="chinese" data-director="吴宇森 / John Woo" data-index="15" data-id="16">
   <button class="poster-button" type="button" aria-label="打开第 16 张，吴宇森 / John Woo">
     <img src="assets/thumbs/director16.webp" data-full="assets/images/director16.webp" alt="第 16 张，吴宇森 / John Woo 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">16</span><h2><span>吴宇森</span><small>John Woo</small></h2><p>女人骑摩托车高速穿过枪战后的街道，白鸽掠过，慢动作，风衣飞扬，火光与烟雾，英雄主义姿态，强烈逆光，动作片电影级构图</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="许鞍华 / Ann Hui" data-id="17">
+<article class="frame-card reveal" data-section="chinese" data-director="许鞍华 / Ann Hui" data-index="16" data-id="17">
   <button class="poster-button" type="button" aria-label="打开第 17 张，许鞍华 / Ann Hui">
     <img src="assets/thumbs/director17.webp" data-full="assets/images/director17.webp" alt="第 17 张，许鞍华 / Ann Hui 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">17</span><h2><span>许鞍华</span><small>Ann Hui</small></h2><p>女人骑摩托车穿过普通社区街道，温和自然光，真实市井生活，街边老人和小店，人物平静而坚韧，生活质感强，柔和写实电影摄影</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="冯小刚 / Feng Xiaogang" data-id="18">
+<article class="frame-card reveal" data-section="chinese" data-director="冯小刚 / Feng Xiaogang" data-index="17" data-id="18">
   <button class="poster-button" type="button" aria-label="打开第 18 张，冯小刚 / Feng Xiaogang">
     <img src="assets/thumbs/director18.webp" data-full="assets/images/director18.webp" alt="第 18 张，冯小刚 / Feng Xiaogang 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">18</span><h2><span>冯小刚</span><small>Feng Xiaogang</small></h2><p>女人骑摩托车穿过热闹城市街道，现实生活喜剧氛围，街边广告牌，人群表情丰富，暖色自然光，轻微荒诞感，现代都市电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="宁浩 / Ning Hao" data-id="19">
+<article class="frame-card reveal" data-section="chinese" data-director="宁浩 / Ning Hao" data-index="18" data-id="19">
   <button class="poster-button" type="button" aria-label="打开第 19 张，宁浩 / Ning Hao">
     <img src="assets/thumbs/director19.webp" data-full="assets/images/director19.webp" alt="第 19 张，宁浩 / Ning Hao 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">19</span><h2><span>宁浩</span><small>Ning Hao</small></h2><p>女人骑摩托车穿过混乱街道，夸张广角，路边摊、广告牌、车辆拥堵，黑色幽默感，强烈动势，饱和色彩，市井犯罪喜剧电影风格</p></div>
 </article>
-<article class="frame-card reveal" data-section="chinese" data-director="田壮壮 / Tian Zhuangzhuang" data-id="20">
+<article class="frame-card reveal" data-section="chinese" data-director="田壮壮 / Tian Zhuangzhuang" data-index="19" data-id="20">
   <button class="poster-button" type="button" aria-label="打开第 20 张，田壮壮 / Tian Zhuangzhuang">
     <img src="assets/thumbs/director20.webp" data-full="assets/images/director20.webp" alt="第 20 张，田壮壮 / Tian Zhuangzhuang 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">20</span><h2><span>田壮壮</span><small>Tian Zhuangzhuang</small></h2><p>女人骑摩托车穿过辽阔边地街道，远山、风沙、空旷道路，人物渺小而坚定，自然光，民族与土地气息，沉静宽银幕构图，史诗现实主义</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="斯坦利·库布里克 / Stanley Kubrick" data-id="21">
+<article class="frame-card reveal" data-section="global" data-director="斯坦利·库布里克 / Stanley Kubrick" data-index="20" data-id="21">
   <button class="poster-button" type="button" aria-label="打开第 21 张，斯坦利·库布里克 / Stanley Kubrick">
     <img src="assets/thumbs/director21.webp" data-full="assets/images/director21.webp" alt="第 21 张，斯坦利·库布里克 / Stanley Kubrick 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">21</span><h2><span>斯坦利·库布里克</span><small>Stanley Kubrick</small></h2><p>女人骑摩托车穿过极度对称的城市街道，中央透视构图，冷峻几何空间，干净白色建筑，强控制感，神秘疏离氛围，精密电影摄影</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="阿尔弗雷德·希区柯克 / Alfred Hitchcock" data-id="22">
+<article class="frame-card reveal" data-section="global" data-director="阿尔弗雷德·希区柯克 / Alfred Hitchcock" data-index="21" data-id="22">
   <button class="poster-button" type="button" aria-label="打开第 22 张，阿尔弗雷德·希区柯克 / Alfred Hitchcock">
     <img src="assets/thumbs/director22.webp" data-full="assets/images/director22.webp" alt="第 22 张，阿尔弗雷德·希区柯克 / Alfred Hitchcock 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">22</span><h2><span>阿尔弗雷德·希区柯克</span><small>Alfred Hitchcock</small></h2><p>女人骑摩托车穿过安静街道，背后建筑窗户暗藏窥视感，悬疑气氛，优雅但紧张的构图，阴影斜切路面，经典惊悚电影光影</p></div>
 </article>
-<article class="frame-card reveal" data-section="asia" data-director="黑泽明 / Akira Kurosawa" data-id="23">
+<article class="frame-card reveal" data-section="asia" data-director="黑泽明 / Akira Kurosawa" data-index="22" data-id="23">
   <button class="poster-button" type="button" aria-label="打开第 23 张，黑泽明 / Akira Kurosawa">
     <img src="assets/thumbs/director23.webp" data-full="assets/images/director23.webp" alt="第 23 张，黑泽明 / Akira Kurosawa 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">23</span><h2><span>黑泽明</span><small>Akira Kurosawa</small></h2><p>女人骑摩托车穿过狂风暴雨中的街道，强烈天气元素，黑白高对比，尘土与雨水飞溅，人物姿态坚毅，武士片般的史诗动势，宽银幕构图</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="费德里科·费里尼 / Federico Fellini" data-id="24">
+<article class="frame-card reveal" data-section="global" data-director="费德里科·费里尼 / Federico Fellini" data-index="23" data-id="24">
   <button class="poster-button" type="button" aria-label="打开第 24 张，费德里科·费里尼 / Federico Fellini">
     <img src="assets/thumbs/director24.webp" data-full="assets/images/director24.webp" alt="第 24 张，费德里科·费里尼 / Federico Fellini 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">24</span><h2><span>费德里科·费里尼</span><small>Federico Fellini</small></h2><p>女人骑摩托车穿过梦幻般的夜间街道，夸张人物、马戏团式灯光、喷泉与古典建筑，荒诞又华丽，超现实都市游行感，黑白胶片质感</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="安德烈·塔可夫斯基 / Andrei Tarkovsky" data-id="25">
+<article class="frame-card reveal" data-section="global" data-director="安德烈·塔可夫斯基 / Andrei Tarkovsky" data-index="24" data-id="25">
   <button class="poster-button" type="button" aria-label="打开第 25 张，安德烈·塔可夫斯基 / Andrei Tarkovsky">
     <img src="assets/thumbs/director25.webp" data-full="assets/images/director25.webp" alt="第 25 张，安德烈·塔可夫斯基 / Andrei Tarkovsky 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">25</span><h2><span>安德烈·塔可夫斯基</span><small>Andrei Tarkovsky</small></h2><p>女人骑摩托车穿过积水街道，雾气、废墟、湿润地面反光，时间缓慢流动，诗意孤独，低饱和自然光，冥想式电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="马丁·斯科塞斯 / Martin Scorsese" data-id="26">
+<article class="frame-card reveal" data-section="global" data-director="马丁·斯科塞斯 / Martin Scorsese" data-index="25" data-id="26">
   <button class="poster-button" type="button" aria-label="打开第 26 张，马丁·斯科塞斯 / Martin Scorsese">
     <img src="assets/thumbs/director26.webp" data-full="assets/images/director26.webp" alt="第 26 张，马丁·斯科塞斯 / Martin Scorsese 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">26</span><h2><span>马丁·斯科塞斯</span><small>Martin Scorsese</small></h2><p>女人骑摩托车穿过纽约夜街，红色尾灯、黄色出租车、湿润柏油路，强烈都市能量，动态跟拍感，犯罪片张力，霓虹与阴影交错</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="弗朗西斯·福特·科波拉 / Francis Ford Coppola" data-id="27">
+<article class="frame-card reveal" data-section="global" data-director="弗朗西斯·福特·科波拉 / Francis Ford Coppola" data-index="26" data-id="27">
   <button class="poster-button" type="button" aria-label="打开第 27 张，弗朗西斯·福特·科波拉 / Francis Ford Coppola">
     <img src="assets/thumbs/director27.webp" data-full="assets/images/director27.webp" alt="第 27 张，弗朗西斯·福特·科波拉 / Francis Ford Coppola 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">27</span><h2><span>弗朗西斯·福特·科波拉</span><small>Francis Ford Coppola</small></h2><p>女人骑摩托车穿过昏黄街道，深色阴影，古典构图，家族史诗般厚重气氛，暖色路灯，人物神情冷静，庄重电影质感</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="史蒂文·斯皮尔伯格 / Steven Spielberg" data-id="28">
+<article class="frame-card reveal" data-section="global" data-director="史蒂文·斯皮尔伯格 / Steven Spielberg" data-index="27" data-id="28">
   <button class="poster-button" type="button" aria-label="打开第 28 张，史蒂文·斯皮尔伯格 / Steven Spielberg">
     <img src="assets/thumbs/director28.webp" data-full="assets/images/director28.webp" alt="第 28 张，史蒂文·斯皮尔伯格 / Steven Spielberg 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">28</span><h2><span>史蒂文·斯皮尔伯格</span><small>Steven Spielberg</small></h2><p>女人骑摩托车穿过街道，夕阳逆光，镜头带有冒险感，街边孩子回头注视，温暖金色光线，充满奇遇与希望，经典好莱坞电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="雷德利·斯科特 / Ridley Scott" data-id="29">
+<article class="frame-card reveal" data-section="global" data-director="雷德利·斯科特 / Ridley Scott" data-index="28" data-id="29">
   <button class="poster-button" type="button" aria-label="打开第 29 张，雷德利·斯科特 / Ridley Scott">
     <img src="assets/thumbs/director29.webp" data-full="assets/images/director29.webp" alt="第 29 张，雷德利·斯科特 / Ridley Scott 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">29</span><h2><span>雷德利·斯科特</span><small>Ridley Scott</small></h2><p>女人骑摩托车穿过未来雨夜街道，巨大广告屏、蓝绿色霓虹、烟雾、工业建筑，赛博朋克氛围，强烈背光，硬核科幻电影质感</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="大卫·芬奇 / David Fincher" data-id="30">
+<article class="frame-card reveal" data-section="global" data-director="大卫·芬奇 / David Fincher" data-index="29" data-id="30">
   <button class="poster-button" type="button" aria-label="打开第 30 张，大卫·芬奇 / David Fincher">
     <img src="assets/thumbs/director30.webp" data-full="assets/images/director30.webp" alt="第 30 张，大卫·芬奇 / David Fincher 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">30</span><h2><span>大卫·芬奇</span><small>David Fincher</small></h2><p>女人骑摩托车穿过阴暗城市街道，冷绿色调，潮湿混凝土，精密构图，低调光，悬疑与危险感，锐利数字电影摄影，暗黑现代都市</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="昆汀·塔伦蒂诺 / Quentin Tarantino" data-id="31">
+<article class="frame-card reveal" data-section="global" data-director="昆汀·塔伦蒂诺 / Quentin Tarantino" data-index="30" data-id="31">
   <button class="poster-button" type="button" aria-label="打开第 31 张，昆汀·塔伦蒂诺 / Quentin Tarantino">
     <img src="assets/thumbs/director31.webp" data-full="assets/images/director31.webp" alt="第 31 张，昆汀·塔伦蒂诺 / Quentin Tarantino 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">31</span><h2><span>昆汀·塔伦蒂诺</span><small>Quentin Tarantino</small></h2><p>女人骑摩托车穿过阳光街道，复古服装，强烈黄色与红色，低机位仰拍，酷感十足，暴力美学暗示，70年代电影海报感</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="克里斯托弗·诺兰 / Christopher Nolan" data-id="32">
+<article class="frame-card reveal" data-section="global" data-director="克里斯托弗·诺兰 / Christopher Nolan" data-index="31" data-id="32">
   <button class="poster-button" type="button" aria-label="打开第 32 张，克里斯托弗·诺兰 / Christopher Nolan">
     <img src="assets/thumbs/director32.webp" data-full="assets/images/director32.webp" alt="第 32 张，克里斯托弗·诺兰 / Christopher Nolan 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">32</span><h2><span>克里斯托弗·诺兰</span><small>Christopher Nolan</small></h2><p>女人骑摩托车穿过巨大城市街道，高楼形成压迫透视，冷蓝灰色调，IMAX 宽银幕感，现实主义动作场面，强烈速度与命运感</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="韦斯·安德森 / Wes Anderson" data-id="33">
+<article class="frame-card reveal" data-section="global" data-director="韦斯·安德森 / Wes Anderson" data-index="32" data-id="33">
   <button class="poster-button" type="button" aria-label="打开第 33 张，韦斯·安德森 / Wes Anderson">
     <img src="assets/thumbs/director33.webp" data-full="assets/images/director33.webp" alt="第 33 张，韦斯·安德森 / Wes Anderson 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">33</span><h2><span>韦斯·安德森</span><small>Wes Anderson</small></h2><p>女人骑摩托车穿过粉彩色街道，完全对称构图，复古招牌，整齐建筑立面，人物正面居中，柔和色彩，精致模型感，幽默童话电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="蒂姆·伯顿 / Tim Burton" data-id="34">
+<article class="frame-card reveal" data-section="global" data-director="蒂姆·伯顿 / Tim Burton" data-index="33" data-id="34">
   <button class="poster-button" type="button" aria-label="打开第 34 张，蒂姆·伯顿 / Tim Burton">
     <img src="assets/thumbs/director34.webp" data-full="assets/images/director34.webp" alt="第 34 张，蒂姆·伯顿 / Tim Burton 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">34</span><h2><span>蒂姆·伯顿</span><small>Tim Burton</small></h2><p>女人骑摩托车穿过哥特式街道，扭曲建筑、黑白条纹、紫色夜空，怪诞浪漫气质，苍白月光，奇异但优雅，暗黑童话电影感</p></div>
 </article>
-<article class="frame-card reveal" data-section="asia" data-director="宫崎骏 / Hayao Miyazaki" data-id="35">
+<article class="frame-card reveal" data-section="asia" data-director="宫崎骏 / Hayao Miyazaki" data-index="34" data-id="35">
   <button class="poster-button" type="button" aria-label="打开第 35 张，宫崎骏 / Hayao Miyazaki">
     <img src="assets/thumbs/director35.webp" data-full="assets/images/director35.webp" alt="第 35 张，宫崎骏 / Hayao Miyazaki 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">35</span><h2><span>宫崎骏</span><small>Hayao Miyazaki</small></h2><p>女人骑摩托车穿过阳光街道，风吹动头发与衣摆，街边绿植、蓝天白云、温暖小镇，机械与自然和谐共存，清新手绘动画质感</p></div>
 </article>
-<article class="frame-card reveal" data-section="asia" data-director="今敏 / Satoshi Kon" data-id="36">
+<article class="frame-card reveal" data-section="asia" data-director="今敏 / Satoshi Kon" data-index="35" data-id="36">
   <button class="poster-button" type="button" aria-label="打开第 36 张，今敏 / Satoshi Kon">
     <img src="assets/thumbs/director36.webp" data-full="assets/images/director36.webp" alt="第 36 张，今敏 / Satoshi Kon 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">36</span><h2><span>今敏</span><small>Satoshi Kon</small></h2><p>女人骑摩托车穿过现实与幻觉重叠的街道，广告牌突然变形，镜面反射出现另一个空间，强烈心理感，都市超现实构图，锐利动画电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="asia" data-director="朴赞郁 / Park Chan-wook" data-id="37">
+<article class="frame-card reveal" data-section="asia" data-director="朴赞郁 / Park Chan-wook" data-index="36" data-id="37">
   <button class="poster-button" type="button" aria-label="打开第 37 张，朴赞郁 / Park Chan-wook">
     <img src="assets/thumbs/director37.webp" data-full="assets/images/director37.webp" alt="第 37 张，朴赞郁 / Park Chan-wook 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">37</span><h2><span>朴赞郁</span><small>Park Chan-wook</small></h2><p>女人骑摩托车穿过精致冷艳的街道，深红与墨绿色色调，优雅复仇氛围，构图极端讲究，奢华室外灯光，危险而美丽的电影感</p></div>
 </article>
-<article class="frame-card reveal" data-section="asia" data-director="奉俊昊 / Bong Joon-ho" data-id="38">
+<article class="frame-card reveal" data-section="asia" data-director="奉俊昊 / Bong Joon-ho" data-index="37" data-id="38">
   <button class="poster-button" type="button" aria-label="打开第 38 张，奉俊昊 / Bong Joon-ho">
     <img src="assets/thumbs/director38.webp" data-full="assets/images/director38.webp" alt="第 38 张，奉俊昊 / Bong Joon-ho 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">38</span><h2><span>奉俊昊</span><small>Bong Joon-ho</small></h2><p>女人骑摩托车穿过阶层分明的城市街道，一侧是豪宅区一侧是地下街，雨后路面，黑色幽默与社会寓言感，精准构图，冷暖对照</p></div>
 </article>
-<article class="frame-card reveal" data-section="asia" data-director="金基德 / Kim Ki-duk" data-id="39">
+<article class="frame-card reveal" data-section="asia" data-director="金基德 / Kim Ki-duk" data-index="38" data-id="39">
   <button class="poster-button" type="button" aria-label="打开第 39 张，金基德 / Kim Ki-duk">
     <img src="assets/thumbs/director39.webp" data-full="assets/images/director39.webp" alt="第 39 张，金基德 / Kim Ki-duk 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">39</span><h2><span>金基德</span><small>Kim Ki-duk</small></h2><p>女人骑摩托车穿过空旷河边街道，极简空间，冷风，水面反光，人物沉默孤独，象征性构图，低饱和色彩，静谧而压抑的电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="佩德罗·阿莫多瓦 / Pedro Almodóvar" data-id="40">
+<article class="frame-card reveal" data-section="global" data-director="佩德罗·阿莫多瓦 / Pedro Almodóvar" data-index="39" data-id="40">
   <button class="poster-button" type="button" aria-label="打开第 40 张，佩德罗·阿莫多瓦 / Pedro Almodóvar">
     <img src="assets/thumbs/director40.webp" data-full="assets/images/director40.webp" alt="第 40 张，佩德罗·阿莫多瓦 / Pedro Almodóvar 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">40</span><h2><span>佩德罗·阿莫多瓦</span><small>Pedro Almodóvar</small></h2><p>女人骑摩托车穿过马德里街道，鲜艳红色、蓝色和黄色墙面，强烈女性气质，戏剧化情绪，时尚服装，明亮饱和色彩，热烈电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="吉尔莫·德尔·托罗 / Guillermo del Toro" data-id="41">
+<article class="frame-card reveal" data-section="global" data-director="吉尔莫·德尔·托罗 / Guillermo del Toro" data-index="40" data-id="41">
   <button class="poster-button" type="button" aria-label="打开第 41 张，吉尔莫·德尔·托罗 / Guillermo del Toro">
     <img src="assets/thumbs/director41.webp" data-full="assets/images/director41.webp" alt="第 41 张，吉尔莫·德尔·托罗 / Guillermo del Toro 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">41</span><h2><span>吉尔莫·德尔·托罗</span><small>Guillermo del Toro</small></h2><p>女人骑摩托车穿过神秘夜街，古老建筑、湿润石板路、金色与蓝绿色灯光，奇幻生物暗影若隐若现，童话与恐怖融合，华丽细节</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="让-吕克·戈达尔 / Jean-Luc Godard" data-id="42">
+<article class="frame-card reveal" data-section="global" data-director="让-吕克·戈达尔 / Jean-Luc Godard" data-index="41" data-id="42">
   <button class="poster-button" type="button" aria-label="打开第 42 张，让-吕克·戈达尔 / Jean-Luc Godard">
     <img src="assets/thumbs/director42.webp" data-full="assets/images/director42.webp" alt="第 42 张，让-吕克·戈达尔 / Jean-Luc Godard 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">42</span><h2><span>让-吕克·戈达尔</span><small>Jean-Luc Godard</small></h2><p>女人骑摩托车穿过巴黎街道，跳切感构图，红蓝白强色块，新浪潮街拍感，随性叛逆，手持摄影，胶片颗粒，现代主义电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="弗朗索瓦·特吕弗 / François Truffaut" data-id="43">
+<article class="frame-card reveal" data-section="global" data-director="弗朗索瓦·特吕弗 / François Truffaut" data-index="42" data-id="43">
   <button class="poster-button" type="button" aria-label="打开第 43 张，弗朗索瓦·特吕弗 / François Truffaut">
     <img src="assets/thumbs/director43.webp" data-full="assets/images/director43.webp" alt="第 43 张，弗朗索瓦·特吕弗 / François Truffaut 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">43</span><h2><span>弗朗索瓦·特吕弗</span><small>François Truffaut</small></h2><p>女人骑摩托车穿过浪漫街道，柔和黑白胶片，路边咖啡馆，青春与自由感，轻盈自然的摄影，人物带着即兴情绪，法国新浪潮氛围</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="阿涅斯·瓦尔达 / Agnès Varda" data-id="44">
+<article class="frame-card reveal" data-section="global" data-director="阿涅斯·瓦尔达 / Agnès Varda" data-index="43" data-id="44">
   <button class="poster-button" type="button" aria-label="打开第 44 张，阿涅斯·瓦尔达 / Agnès Varda">
     <img src="assets/thumbs/director44.webp" data-full="assets/images/director44.webp" alt="第 44 张，阿涅斯·瓦尔达 / Agnès Varda 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">44</span><h2><span>阿涅斯·瓦尔达</span><small>Agnès Varda</small></h2><p>女人骑摩托车穿过海边小镇街道，温柔纪实感，鲜活色彩，普通人的目光，诗意女性视角，街边花店与海风，亲密而自由的电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="米开朗基罗·安东尼奥尼 / Michelangelo Antonioni" data-id="45">
+<article class="frame-card reveal" data-section="global" data-director="米开朗基罗·安东尼奥尼 / Michelangelo Antonioni" data-index="44" data-id="45">
   <button class="poster-button" type="button" aria-label="打开第 45 张，米开朗基罗·安东尼奥尼 / Michelangelo Antonioni">
     <img src="assets/thumbs/director45.webp" data-full="assets/images/director45.webp" alt="第 45 张，米开朗基罗·安东尼奥尼 / Michelangelo Antonioni 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">45</span><h2><span>米开朗基罗·安东尼奥尼</span><small>Michelangelo Antonioni</small></h2><p>女人骑摩托车穿过现代主义空旷街道，巨大建筑立面，人物孤独而渺小，冷静构图，低饱和色彩，存在主义疏离感，静默电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="赛尔乔·莱昂内 / Sergio Leone" data-id="46">
+<article class="frame-card reveal" data-section="global" data-director="赛尔乔·莱昂内 / Sergio Leone" data-index="45" data-id="46">
   <button class="poster-button" type="button" aria-label="打开第 46 张，赛尔乔·莱昂内 / Sergio Leone">
     <img src="assets/thumbs/director46.webp" data-full="assets/images/director46.webp" alt="第 46 张，赛尔乔·莱昂内 / Sergio Leone 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">46</span><h2><span>赛尔乔·莱昂内</span><small>Sergio Leone</small></h2><p>女人骑摩托车穿过荒凉尘土街道，极端远景与眼部特写感，夕阳逆光，风沙飞扬，西部片张力，孤胆骑士气质，宽银幕电影构图</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="泰伦斯·马利克 / Terrence Malick" data-id="47">
+<article class="frame-card reveal" data-section="global" data-director="泰伦斯·马利克 / Terrence Malick" data-index="46" data-id="47">
   <button class="poster-button" type="button" aria-label="打开第 47 张，泰伦斯·马利克 / Terrence Malick">
     <img src="assets/thumbs/director47.webp" data-full="assets/images/director47.webp" alt="第 47 张，泰伦斯·马利克 / Terrence Malick 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">47</span><h2><span>泰伦斯·马利克</span><small>Terrence Malick</small></h2><p>女人骑摩托车穿过树影斑驳的街道，黄金时刻自然光，镜头贴近风、光与皮肤，诗意旁白感，柔和广角，生命感与自由感，梦幻写实</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="丹尼斯·维伦纽瓦 / Denis Villeneuve" data-id="48">
+<article class="frame-card reveal" data-section="global" data-director="丹尼斯·维伦纽瓦 / Denis Villeneuve" data-index="47" data-id="48">
   <button class="poster-button" type="button" aria-label="打开第 48 张，丹尼斯·维伦纽瓦 / Denis Villeneuve">
     <img src="assets/thumbs/director48.webp" data-full="assets/images/director48.webp" alt="第 48 张，丹尼斯·维伦纽瓦 / Denis Villeneuve 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">48</span><h2><span>丹尼斯·维伦纽瓦</span><small>Denis Villeneuve</small></h2><p>女人骑摩托车穿过巨大沉默的未来街道，雾霾天空，极简建筑，橙灰色调，宏大尺度，孤独人物，压迫感科幻氛围，冷峻电影摄影</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="加斯帕·诺 / Gaspar Noé" data-id="49">
+<article class="frame-card reveal" data-section="global" data-director="加斯帕·诺 / Gaspar Noé" data-index="48" data-id="49">
   <button class="poster-button" type="button" aria-label="打开第 49 张，加斯帕·诺 / Gaspar Noé">
     <img src="assets/thumbs/director49.webp" data-full="assets/images/director49.webp" alt="第 49 张，加斯帕·诺 / Gaspar Noé 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">49</span><h2><span>加斯帕·诺</span><small>Gaspar Noé</small></h2><p>女人骑摩托车穿过霓虹街道，极端红紫灯光，旋转镜头感，强烈眩晕效果，夜店外墙与湿润路面，刺激、不安、迷幻的电影画面</p></div>
 </article>
-<article class="frame-card reveal" data-section="global" data-director="格蕾塔·葛韦格 / Greta Gerwig" data-id="50">
+<article class="frame-card reveal" data-section="global" data-director="格蕾塔·葛韦格 / Greta Gerwig" data-index="49" data-id="50">
   <button class="poster-button" type="button" aria-label="打开第 50 张，格蕾塔·葛韦格 / Greta Gerwig">
     <img src="assets/thumbs/director50.webp" data-full="assets/images/director50.webp" alt="第 50 张，格蕾塔·葛韦格 / Greta Gerwig 风格启发画面" loading="lazy" width="720" height="480">
   </button>
   <div class="card-copy"><span class="frame-number">50</span><h2><span>格蕾塔·葛韦格</span><small>Greta Gerwig</small></h2><p>女人骑摩托车穿过明亮街道，温暖日光，粉色与蓝色城市色彩，青春、自由与自我表达，轻盈构图，现代女性成长电影氛围，清爽高清细节</p></div>
-</article></div></section></main><div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview"><div class="lightbox-panel"><img id="lightboxImage" alt="" src=""><div class="lightbox-copy"><div><h3 id="lightboxTitle"></h3><p id="lightboxText"></p></div><button class="close-button" type="button" id="closeLightbox">关闭</button></div></div></div><footer class="site-shell footer"><div class="footer-inner"><span>Created as a static cinema gallery.</span><span>Images corrected and displayed without cropping.</span></div></footer><script>
-const cards=Array.from(document.querySelectorAll('.frame-card'));const filterButtons=Array.from(document.querySelectorAll('.filter-button'));const lightbox=document.getElementById('lightbox');const lightboxImage=document.getElementById('lightboxImage');const lightboxTitle=document.getElementById('lightboxTitle');const lightboxText=document.getElementById('lightboxText');const closeLightbox=document.getElementById('closeLightbox');const observer=new IntersectionObserver((items)=>{items.forEach((item)=>{if(item.isIntersecting){item.target.classList.add('is-visible');observer.unobserve(item.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach((element)=>observer.observe(element));filterButtons.forEach((button)=>{button.addEventListener('click',()=>{const filter=button.dataset.filter;filterButtons.forEach((item)=>item.setAttribute('aria-pressed',String(item===button)));cards.forEach((card)=>{const visible=filter==='all'||card.dataset.section===filter;card.classList.toggle('is-hidden',!visible);if(visible)card.classList.add('is-visible')})})});cards.forEach((card)=>{const button=card.querySelector('.poster-button');const image=card.querySelector('img');const title=card.querySelector('h2').innerText.replace(/\n/g,' / ');const text=card.querySelector('p').textContent;const number=card.querySelector('.frame-number').textContent;button.addEventListener('click',()=>{lightboxImage.src=image.dataset.full;lightboxImage.alt=image.alt;lightboxTitle.textContent=number+'  '+title;lightboxText.textContent=text;lightbox.classList.add('is-open');closeLightbox.focus()})});function closePreview(){lightbox.classList.remove('is-open');lightboxImage.removeAttribute('src')}closeLightbox.addEventListener('click',closePreview);lightbox.addEventListener('click',(event)=>{if(event.target===lightbox)closePreview()});document.addEventListener('keydown',(event)=>{if(event.key==='Escape'&&lightbox.classList.contains('is-open'))closePreview()});
-</script></body></html>
+</article></div></section></main>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview"><button class="lightbox-edge prev" type="button" data-lightbox-prev aria-label="上一张">‹</button><button class="lightbox-edge next" type="button" data-lightbox-next aria-label="下一张">›</button><div class="lightbox-panel"><img id="lightboxImage" alt="" src=""><div class="lightbox-copy"><div><h3 id="lightboxTitle"></h3><p id="lightboxText"></p></div><div class="lightbox-actions"><button class="nav-button" type="button" data-lightbox-prev>上一张</button><button class="nav-button" type="button" data-lightbox-next>下一张</button><button class="close-button" type="button" id="closeLightbox">关闭</button></div></div></div></div>
+  <footer class="site-shell footer"><div class="footer-inner"><span>Created as a static cinema gallery.</span><span><a href="https://github.com/holynova/director-motorcycle-cinema" target="_blank" rel="noopener">GitHub repository</a></span></div></footer>
+  <script>
+const galleryData = [{"id": 1, "director_cn": "张艺谋", "director_en": "Zhang Yimou", "display_name": "张艺谋 / Zhang Yimou", "subtitle": "人活一世，图个痛快。", "description": "女人骑着黑色摩托车穿过古城街道，浓烈红色灯笼与金黄色墙面，强对比色彩，大面积留白，庄重对称构图，尘土飞扬，史诗感，电影级光影，高清细节", "section": "chinese", "image": "assets/images/director01.webp", "thumb": "assets/thumbs/director01.webp"}, {"id": 2, "director_cn": "王家卫", "director_en": "Wong Kar-wai", "display_name": "王家卫 / Wong Kar-wai", "subtitle": "所有的记忆都是潮湿的。", "description": "女人骑着复古摩托车穿过雨夜香港街道，霓虹灯反射在湿润路面，慢门拖影，绿色与红色霓虹交错，孤独浪漫氛围，窄巷构图，胶片颗粒，电影截图感", "section": "chinese", "image": "assets/images/director02.webp", "thumb": "assets/thumbs/director02.webp"}, {"id": 3, "director_cn": "李安", "director_en": "Ang Lee", "display_name": "李安 / Ang Lee", "subtitle": "每个人心里都有一座断背山。", "description": "女人骑摩托车穿过安静街道，城市与自然边界交融，克制情绪，柔和自然光，细腻人物表情，真实生活质感，优雅构图，温柔电影摄影", "section": "chinese", "image": "assets/images/director03.webp", "thumb": "assets/thumbs/director03.webp"}, {"id": 4, "director_cn": "陈凯歌", "director_en": "Chen Kaige", "display_name": "陈凯歌 / Chen Kaige", "subtitle": "不疯魔，不成活。", "description": "女人骑着摩托车穿过旧北京街道，戏剧化光影，传统建筑与现代交通工具对比，人物带有命运感，宽银幕构图，厚重色彩，历史与现实交错，电影级画面", "section": "chinese", "image": "assets/images/director04.webp", "thumb": "assets/thumbs/director04.webp"}, {"id": 5, "director_cn": "贾樟柯", "director_en": "Jia Zhangke", "display_name": "贾樟柯 / Jia Zhangke", "subtitle": "山河依旧，故人已远。", "description": "女人骑摩托车穿过中国小城街道，灰蓝天空，旧广告牌，水泥楼房，真实纪实感，冷静长镜头构图，普通街景中的孤独人物，低饱和色彩，社会现实主义摄影", "section": "chinese", "image": "assets/images/director05.webp", "thumb": "assets/thumbs/director05.webp"}, {"id": 6, "director_cn": "侯孝贤", "director_en": "Hou Hsiao-hsien", "display_name": "侯孝贤 / Hou Hsiao-hsien", "subtitle": "最好的是你根本看不到的。", "description": "女人骑摩托车缓慢穿过老街，远景固定机位，柔和自然光，生活化街边摊与斑驳墙面，人物被环境包围，安静克制，诗意现实主义，胶片质感", "section": "chinese", "image": "assets/images/director06.webp", "thumb": "assets/thumbs/director06.webp"}, {"id": 7, "director_cn": "杨德昌", "director_en": "Edward Yang", "display_name": "杨德昌 / Edward Yang", "subtitle": "我们是不是只能看到一半的事情？", "description": "女人骑摩托车穿过台北现代街道，都市秩序感，玻璃建筑与复杂路口，冷静构图，人物显得疏离，淡雅色彩，理性而孤独的城市电影感", "section": "chinese", "image": "assets/images/director07.webp", "thumb": "assets/thumbs/director07.webp"}, {"id": 8, "director_cn": "杜琪峰", "director_en": "Johnnie To", "display_name": "杜琪峰 / Johnnie To", "subtitle": "江湖不是打打杀杀，江湖是人情世故。", "description": "女人骑摩托车穿过夜晚街道，硬朗黑色皮衣，冷蓝路灯，强烈明暗对比，街角暗处有紧张感，精准几何构图，香港犯罪片氛围，锐利电影光影", "section": "chinese", "image": "assets/images/director08.webp", "thumb": "assets/thumbs/director08.webp"}, {"id": 9, "director_cn": "徐克", "director_en": "Tsui Hark", "display_name": "徐克 / Tsui Hark", "subtitle": "有人的地方就有江湖。", "description": "女人骑摩托车冲过充满风沙和霓虹的街道，夸张动势，广角镜头，衣摆飞扬，现代武侠感，强烈色彩，戏剧化烟雾，速度感，奇幻动作电影画面", "section": "chinese", "image": "assets/images/director09.webp", "thumb": "assets/thumbs/director09.webp"}, {"id": 10, "director_cn": "关锦鹏", "director_en": "Stanley Kwan", "display_name": "关锦鹏 / Stanley Kwan", "subtitle": "也许每一个男子全都有过这样的两个女人。", "description": "女人骑摩托车穿过夜色街道，柔美灯光，复古服装，情绪化面部特写，怀旧都市氛围，细腻女性视角，淡淡忧伤，暖色胶片质感，优雅电影摄影", "section": "chinese", "image": "assets/images/director10.webp", "thumb": "assets/thumbs/director10.webp"}, {"id": 11, "director_cn": "姜文", "director_en": "Jiang Wen", "display_name": "姜文 / Jiang Wen", "subtitle": "让子弹飞一会儿。", "description": "女人骑摩托车穿过烈日下的街道，强烈阳光，高饱和暖色，夸张透视，荒诞幽默气质，人物自信张扬，尘土与红墙，粗粝而有力量的电影画面", "section": "chinese", "image": "assets/images/director11.webp", "thumb": "assets/thumbs/director11.webp"}, {"id": 12, "director_cn": "毕赣", "director_en": "Bi Gan", "display_name": "毕赣 / Bi Gan", "subtitle": "当我的光曝在你身上，重逢就是一间暗室。", "description": "女人骑摩托车穿过潮湿夜晚的山城街道，梦境般长镜头感，绿色霓虹，烟雾，楼梯与隧道交错，现实与幻觉模糊，诗意迷离，低照度电影摄影", "section": "chinese", "image": "assets/images/director12.webp", "thumb": "assets/thumbs/director12.webp"}, {"id": 13, "director_cn": "娄烨", "director_en": "Lou Ye", "display_name": "娄烨 / Lou Ye", "subtitle": "爱情其实就是一种瘾。", "description": "女人骑摩托车穿过拥挤潮湿的城市街道，手持摄影感，失焦灯光，人物情绪强烈，混乱而亲密的都市空间，低饱和色彩，真实而躁动的电影画面", "section": "chinese", "image": "assets/images/director13.webp", "thumb": "assets/thumbs/director13.webp"}, {"id": 14, "director_cn": "胡金铨", "director_en": "King Hu", "display_name": "胡金铨 / King Hu", "subtitle": "剑道即人道，心正即剑正。", "description": "女人骑摩托车穿过古老城门街道，传统武侠构图，飞扬尘土，远山与屋檐剪影，人物姿态英气，古典东方美学与现代摩托车融合，庄严宽银幕画面", "section": "chinese", "image": "assets/images/director14.webp", "thumb": "assets/thumbs/director14.webp"}, {"id": 15, "director_cn": "蔡明亮", "director_en": "Tsai Ming-liang", "display_name": "蔡明亮 / Tsai Ming-liang", "subtitle": "我不知道我要去哪里，但我知道我回不去了。", "description": "女人骑摩托车穿过空旷潮湿街道，几乎没有行人，静止长镜头感，水渍地面，孤独人物，冷色调，城市荒凉感，极简构图，沉默电影氛围", "section": "chinese", "image": "assets/images/director15.webp", "thumb": "assets/thumbs/director15.webp"}, {"id": 16, "director_cn": "吴宇森", "director_en": "John Woo", "display_name": "吴宇森 / John Woo", "subtitle": "我最讨厌别人用枪指着我的头。", "description": "女人骑摩托车高速穿过枪战后的街道，白鸽掠过，慢动作，风衣飞扬，火光与烟雾，英雄主义姿态，强烈逆光，动作片电影级构图", "section": "chinese", "image": "assets/images/director16.webp", "thumb": "assets/thumbs/director16.webp"}, {"id": 17, "director_cn": "许鞍华", "director_en": "Ann Hui", "display_name": "许鞍华 / Ann Hui", "subtitle": "人生就是一步难一步佳。", "description": "女人骑摩托车穿过普通社区街道，温和自然光，真实市井生活，街边老人和小店，人物平静而坚韧，生活质感强，柔和写实电影摄影", "section": "chinese", "image": "assets/images/director17.webp", "thumb": "assets/thumbs/director17.webp"}, {"id": 18, "director_cn": "冯小刚", "director_en": "Feng Xiaogang", "display_name": "冯小刚 / Feng Xiaogang", "subtitle": "做人要厚道。", "description": "女人骑摩托车穿过热闹城市街道，现实生活喜剧氛围，街边广告牌，人群表情丰富，暖色自然光，轻微荒诞感，现代都市电影画面", "section": "chinese", "image": "assets/images/director18.webp", "thumb": "assets/thumbs/director18.webp"}, {"id": 19, "director_cn": "宁浩", "director_en": "Ning Hao", "display_name": "宁浩 / Ning Hao", "subtitle": "这世上没有神，只有人。", "description": "女人骑摩托车穿过混乱街道，夸张广角，路边摊、广告牌、车辆拥堵，黑色幽默感，强烈动势，饱和色彩，市井犯罪喜剧电影风格", "section": "chinese", "image": "assets/images/director19.webp", "thumb": "assets/thumbs/director19.webp"}, {"id": 20, "director_cn": "田壮壮", "director_en": "Tian Zhuangzhuang", "display_name": "田壮壮 / Tian Zhuangzhuang", "subtitle": "生于斯，长于斯，死于斯。", "description": "女人骑摩托车穿过辽阔边地街道，远山、风沙、空旷道路，人物渺小而坚定，自然光，民族与土地气息，沉静宽银幕构图，史诗现实主义", "section": "chinese", "image": "assets/images/director20.webp", "thumb": "assets/thumbs/director20.webp"}, {"id": 21, "director_cn": "斯坦利·库布里克", "director_en": "Stanley Kubrick", "display_name": "斯坦利·库布里克 / Stanley Kubrick", "subtitle": "I'm sorry, Dave. I'm afraid I can't do that.", "description": "女人骑摩托车穿过极度对称的城市街道，中央透视构图，冷峻几何空间，干净白色建筑，强控制感，神秘疏离氛围，精密电影摄影", "section": "global", "image": "assets/images/director21.webp", "thumb": "assets/thumbs/director21.webp"}, {"id": 22, "director_cn": "阿尔弗雷德·希区柯克", "director_en": "Alfred Hitchcock", "display_name": "阿尔弗雷德·希区柯克 / Alfred Hitchcock", "subtitle": "There is no terror in the bang, only in the anticipation of it.", "description": "女人骑摩托车穿过安静街道，背后建筑窗户暗藏窥视感，悬疑气氛，优雅但紧张的构图，阴影斜切路面，经典惊悚电影光影", "section": "global", "image": "assets/images/director22.webp", "thumb": "assets/thumbs/director22.webp"}, {"id": 23, "director_cn": "黑泽明", "director_en": "Akira Kurosawa", "display_name": "黑泽明 / Akira Kurosawa", "subtitle": "在这个疯狂的世界里，只有疯狂的人才是清醒的。", "description": "女人骑摩托车穿过狂风暴雨中的街道，强烈天气元素，黑白高对比，尘土与雨水飞溅，人物姿态坚毅，武士片般的史诗动势，宽银幕构图", "section": "asia", "image": "assets/images/director23.webp", "thumb": "assets/thumbs/director23.webp"}, {"id": 24, "director_cn": "费德里科·费里尼", "director_en": "Federico Fellini", "display_name": "费德里科·费里尼 / Federico Fellini", "subtitle": "La vita è una festa.", "description": "女人骑摩托车穿过梦幻般的夜间街道，夸张人物、马戏团式灯光、喷泉与古典建筑，荒诞又华丽，超现实都市游行感，黑白胶片质感", "section": "global", "image": "assets/images/director24.webp", "thumb": "assets/thumbs/director24.webp"}, {"id": 25, "director_cn": "安德烈·塔可夫斯基", "director_en": "Andrei Tarkovsky", "display_name": "安德烈·塔可夫斯基 / Andrei Tarkovsky", "subtitle": "一个人必须独自面对自己的灵魂。", "description": "女人骑摩托车穿过积水街道，雾气、废墟、湿润地面反光，时间缓慢流动，诗意孤独，低饱和自然光，冥想式电影画面", "section": "global", "image": "assets/images/director25.webp", "thumb": "assets/thumbs/director25.webp"}, {"id": 26, "director_cn": "马丁·斯科塞斯", "director_en": "Martin Scorsese", "display_name": "马丁·斯科塞斯 / Martin Scorsese", "subtitle": "As far back as I can remember, I always wanted to be a gangster.", "description": "女人骑摩托车穿过纽约夜街，红色尾灯、黄色出租车、湿润柏油路，强烈都市能量，动态跟拍感，犯罪片张力，霓虹与阴影交错", "section": "global", "image": "assets/images/director26.webp", "thumb": "assets/thumbs/director26.webp"}, {"id": 27, "director_cn": "弗朗西斯·福特·科波拉", "director_en": "Francis Ford Coppola", "display_name": "弗朗西斯·福特·科波拉 / Francis Ford Coppola", "subtitle": "I'm gonna make him an offer he can't refuse.", "description": "女人骑摩托车穿过昏黄街道，深色阴影，古典构图，家族史诗般厚重气氛，暖色路灯，人物神情冷静，庄重电影质感", "section": "global", "image": "assets/images/director27.webp", "thumb": "assets/thumbs/director27.webp"}, {"id": 28, "director_cn": "史蒂文·斯皮尔伯格", "director_en": "Steven Spielberg", "display_name": "史蒂文·斯皮尔伯格 / Steven Spielberg", "subtitle": "Life finds a way.", "description": "女人骑摩托车穿过街道，夕阳逆光，镜头带有冒险感，街边孩子回头注视，温暖金色光线，充满奇遇与希望，经典好莱坞电影画面", "section": "global", "image": "assets/images/director28.webp", "thumb": "assets/thumbs/director28.webp"}, {"id": 29, "director_cn": "雷德利·斯科特", "director_en": "Ridley Scott", "display_name": "雷德利·斯科特 / Ridley Scott", "subtitle": "I've seen things you people wouldn't believe.", "description": "女人骑摩托车穿过未来雨夜街道，巨大广告屏、蓝绿色霓虹、烟雾、工业建筑，赛博朋克氛围，强烈背光，硬核科幻电影质感", "section": "global", "image": "assets/images/director29.webp", "thumb": "assets/thumbs/director29.webp"}, {"id": 30, "director_cn": "大卫·芬奇", "director_en": "David Fincher", "display_name": "大卫·芬奇 / David Fincher", "subtitle": "The first rule of Fight Club is: You do not talk about Fight Club.", "description": "女人骑摩托车穿过阴暗城市街道，冷绿色调，潮湿混凝土，精密构图，低调光，悬疑与危险感，锐利数字电影摄影，暗黑现代都市", "section": "global", "image": "assets/images/director30.webp", "thumb": "assets/thumbs/director30.webp"}, {"id": 31, "director_cn": "昆汀·塔伦蒂诺", "director_en": "Quentin Tarantino", "display_name": "昆汀·塔伦蒂诺 / Quentin Tarantino", "subtitle": "You know what they call a Quarter Pounder with Cheese in Paris?", "description": "女人骑摩托车穿过阳光街道，复古服装，强烈黄色与红色，低机位仰拍，酷感十足，暴力美学暗示，70年代电影海报感", "section": "global", "image": "assets/images/director31.webp", "thumb": "assets/thumbs/director31.webp"}, {"id": 32, "director_cn": "克里斯托弗·诺兰", "director_en": "Christopher Nolan", "display_name": "克里斯托弗·诺兰 / Christopher Nolan", "subtitle": "You mustn't be afraid to dream a little bigger, darling.", "description": "女人骑摩托车穿过巨大城市街道，高楼形成压迫透视，冷蓝灰色调，IMAX 宽银幕感，现实主义动作场面，强烈速度与命运感", "section": "global", "image": "assets/images/director32.webp", "thumb": "assets/thumbs/director32.webp"}, {"id": 33, "director_cn": "韦斯·安德森", "director_en": "Wes Anderson", "display_name": "韦斯·安德森 / Wes Anderson", "subtitle": "I've always been an outsider.", "description": "女人骑摩托车穿过粉彩色街道，完全对称构图，复古招牌，整齐建筑立面，人物正面居中，柔和色彩，精致模型感，幽默童话电影画面", "section": "global", "image": "assets/images/director33.webp", "thumb": "assets/thumbs/director33.webp"}, {"id": 34, "director_cn": "蒂姆·伯顿", "director_en": "Tim Burton", "display_name": "蒂姆·伯顿 / Tim Burton", "subtitle": "Everybody's different. That's what makes us special.", "description": "女人骑摩托车穿过哥特式街道，扭曲建筑、黑白条纹、紫色夜空，怪诞浪漫气质，苍白月光，奇异但优雅，暗黑童话电影感", "section": "global", "image": "assets/images/director34.webp", "thumb": "assets/thumbs/director34.webp"}, {"id": 35, "director_cn": "宫崎骏", "director_en": "Hayao Miyazaki", "display_name": "宫崎骏 / Hayao Miyazaki", "subtitle": "生きろ。", "description": "女人骑摩托车穿过阳光街道，风吹动头发与衣摆，街边绿植、蓝天白云、温暖小镇，机械与自然和谐共存，清新手绘动画质感", "section": "asia", "image": "assets/images/director35.webp", "thumb": "assets/thumbs/director35.webp"}, {"id": 36, "director_cn": "今敏", "director_en": "Satoshi Kon", "display_name": "今敏 / Satoshi Kon", "subtitle": "现实与梦境的边界在哪里？", "description": "女人骑摩托车穿过现实与幻觉重叠的街道，广告牌突然变形，镜面反射出现另一个空间，强烈心理感，都市超现实构图，锐利动画电影画面", "section": "asia", "image": "assets/images/director36.webp", "thumb": "assets/thumbs/director36.webp"}, {"id": 37, "director_cn": "朴赞郁", "director_en": "Park Chan-wook", "display_name": "朴赞郁 / Park Chan-wook", "subtitle": "复仇是冰冷的，但也是甜蜜的。", "description": "女人骑摩托车穿过精致冷艳的街道，深红与墨绿色色调，优雅复仇氛围，构图极端讲究，奢华室外灯光，危险而美丽的电影感", "section": "asia", "image": "assets/images/director37.webp", "thumb": "assets/thumbs/director37.webp"}, {"id": 38, "director_cn": "奉俊昊", "director_en": "Bong Joon-ho", "display_name": "奉俊昊 / Bong Joon-ho", "subtitle": "不是有钱却善良，而是有钱所以善良。", "description": "女人骑摩托车穿过阶层分明的城市街道，一侧是豪宅区一侧是地下街，雨后路面，黑色幽默与社会寓言感，精准构图，冷暖对照", "section": "asia", "image": "assets/images/director38.webp", "thumb": "assets/thumbs/director38.webp"}, {"id": 39, "director_cn": "金基德", "director_en": "Kim Ki-duk", "display_name": "金基德 / Kim Ki-duk", "subtitle": "沉默是这个世界上最响亮的声音。", "description": "女人骑摩托车穿过空旷河边街道，极简空间，冷风，水面反光，人物沉默孤独，象征性构图，低饱和色彩，静谧而压抑的电影画面", "section": "asia", "image": "assets/images/director39.webp", "thumb": "assets/thumbs/director39.webp"}, {"id": 40, "director_cn": "佩德罗·阿莫多瓦", "director_en": "Pedro Almodóvar", "display_name": "佩德罗·阿莫多瓦 / Pedro Almodóvar", "subtitle": "Todo sobre mi madre.", "description": "女人骑摩托车穿过马德里街道，鲜艳红色、蓝色和黄色墙面，强烈女性气质，戏剧化情绪，时尚服装，明亮饱和色彩，热烈电影画面", "section": "global", "image": "assets/images/director40.webp", "thumb": "assets/thumbs/director40.webp"}, {"id": 41, "director_cn": "吉尔莫·德尔·托罗", "director_en": "Guillermo del Toro", "display_name": "吉尔莫·德尔·托罗 / Guillermo del Toro", "subtitle": "In the darkness, there is always light.", "description": "女人骑摩托车穿过神秘夜街，古老建筑、湿润石板路、金色与蓝绿色灯光，奇幻生物暗影若隐若现，童话与恐怖融合，华丽细节", "section": "global", "image": "assets/images/director41.webp", "thumb": "assets/thumbs/director41.webp"}, {"id": 42, "director_cn": "让-吕克·戈达尔", "director_en": "Jean-Luc Godard", "display_name": "让-吕克·戈达尔 / Jean-Luc Godard", "subtitle": "À bout de souffle.", "description": "女人骑摩托车穿过巴黎街道，跳切感构图，红蓝白强色块，新浪潮街拍感，随性叛逆，手持摄影，胶片颗粒，现代主义电影画面", "section": "global", "image": "assets/images/director42.webp", "thumb": "assets/thumbs/director42.webp"}, {"id": 43, "director_cn": "弗朗索瓦·特吕弗", "director_en": "François Truffaut", "display_name": "弗朗索瓦·特吕弗 / François Truffaut", "subtitle": "J'ai une envie de vivre.", "description": "女人骑摩托车穿过浪漫街道，柔和黑白胶片，路边咖啡馆，青春与自由感，轻盈自然的摄影，人物带着即兴情绪，法国新浪潮氛围", "section": "global", "image": "assets/images/director43.webp", "thumb": "assets/thumbs/director43.webp"}, {"id": 44, "director_cn": "阿涅斯·瓦尔达", "director_en": "Agnès Varda", "display_name": "阿涅斯·瓦尔达 / Agnès Varda", "subtitle": "Sans toit ni loi.", "description": "女人骑摩托车穿过海边小镇街道，温柔纪实感，鲜活色彩，普通人的目光，诗意女性视角，街边花店与海风，亲密而自由的电影画面", "section": "global", "image": "assets/images/director44.webp", "thumb": "assets/thumbs/director44.webp"}, {"id": 45, "director_cn": "米开朗基罗·安东尼奥尼", "director_en": "Michelangelo Antonioni", "display_name": "米开朗基罗·安东尼奥尼 / Michelangelo Antonioni", "subtitle": "L'avventura è dentro di noi.", "description": "女人骑摩托车穿过现代主义空旷街道，巨大建筑立面，人物孤独而渺小，冷静构图，低饱和色彩，存在主义疏离感，静默电影画面", "section": "global", "image": "assets/images/director45.webp", "thumb": "assets/thumbs/director45.webp"}, {"id": 46, "director_cn": "赛尔乔·莱昂内", "director_en": "Sergio Leone", "display_name": "赛尔乔·莱昂内 / Sergio Leone", "subtitle": "There are two kinds of people in this world.", "description": "女人骑摩托车穿过荒凉尘土街道，极端远景与眼部特写感，夕阳逆光，风沙飞扬，西部片张力，孤胆骑士气质，宽银幕电影构图", "section": "global", "image": "assets/images/director46.webp", "thumb": "assets/thumbs/director46.webp"}, {"id": 47, "director_cn": "泰伦斯·马利克", "director_en": "Terrence Malick", "display_name": "泰伦斯·马利克 / Terrence Malick", "subtitle": "There's a tree of life growing inside each of us.", "description": "女人骑摩托车穿过树影斑驳的街道，黄金时刻自然光，镜头贴近风、光与皮肤，诗意旁白感，柔和广角，生命感与自由感，梦幻写实", "section": "global", "image": "assets/images/director47.webp", "thumb": "assets/thumbs/director47.webp"}, {"id": 48, "director_cn": "丹尼斯·维伦纽瓦", "director_en": "Denis Villeneuve", "display_name": "丹尼斯·维伦纽瓦 / Denis Villeneuve", "subtitle": "Fear is the mind-killer.", "description": "女人骑摩托车穿过巨大沉默的未来街道，雾霾天空，极简建筑，橙灰色调，宏大尺度，孤独人物，压迫感科幻氛围，冷峻电影摄影", "section": "global", "image": "assets/images/director48.webp", "thumb": "assets/thumbs/director48.webp"}, {"id": 49, "director_cn": "加斯帕·诺", "director_en": "Gaspar Noé", "display_name": "加斯帕·诺 / Gaspar Noé", "subtitle": "Le temps détruit tout.", "description": "女人骑摩托车穿过霓虹街道，极端红紫灯光，旋转镜头感，强烈眩晕效果，夜店外墙与湿润路面，刺激、不安、迷幻的电影画面", "section": "global", "image": "assets/images/director49.webp", "thumb": "assets/thumbs/director49.webp"}, {"id": 50, "director_cn": "格蕾塔·葛韦格", "director_en": "Greta Gerwig", "display_name": "格蕾塔·葛韦格 / Greta Gerwig", "subtitle": "I just want to be whoever I am.", "description": "女人骑摩托车穿过明亮街道，温暖日光，粉色与蓝色城市色彩，青春、自由与自我表达，轻盈构图，现代女性成长电影氛围，清爽高清细节", "section": "global", "image": "assets/images/director50.webp", "thumb": "assets/thumbs/director50.webp"}];
+const cards = Array.from(document.querySelectorAll('.frame-card'));
+const filterButtons = Array.from(document.querySelectorAll('.filter-button'));
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxText = document.getElementById('lightboxText');
+const closeLightbox = document.getElementById('closeLightbox');
+const prevButtons = Array.from(document.querySelectorAll('[data-lightbox-prev]'));
+const nextButtons = Array.from(document.querySelectorAll('[data-lightbox-next]'));
+let activeIndex = 0;
+let touchStartX = 0;
+let touchStartY = 0;
+const observer = new IntersectionObserver((items) => {
+  items.forEach((item) => { if (item.isIntersecting) { item.target.classList.add('is-visible'); observer.unobserve(item.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+function visibleCards() { return cards.filter((card) => !card.classList.contains('is-hidden')); }
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    filterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+    cards.forEach((card) => {
+      const visible = filter === 'all' || card.dataset.section === filter;
+      card.classList.toggle('is-hidden', !visible);
+      if (visible) card.classList.add('is-visible');
+    });
+  });
+});
+function renderLightbox(index) {
+  const items = visibleCards();
+  if (!items.length) return;
+  activeIndex = (index + items.length) % items.length;
+  const card = items[activeIndex];
+  const image = card.querySelector('img');
+  const title = card.querySelector('h2').innerText.replace(/\n/g, ' / ');
+  const text = card.querySelector('p').textContent;
+  const number = card.querySelector('.frame-number').textContent;
+  lightboxImage.src = image.dataset.full;
+  lightboxImage.alt = image.alt;
+  lightboxTitle.textContent = number + '  ' + title;
+  lightboxText.textContent = text;
+}
+function openPreview(card) {
+  const items = visibleCards();
+  const index = Math.max(0, items.indexOf(card));
+  renderLightbox(index);
+  lightbox.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  closeLightbox.focus();
+}
+function closePreview() {
+  lightbox.classList.remove('is-open');
+  lightboxImage.removeAttribute('src');
+  document.body.style.overflow = '';
+}
+function stepPreview(delta) { if (lightbox.classList.contains('is-open')) renderLightbox(activeIndex + delta); }
+cards.forEach((card) => card.querySelector('.poster-button').addEventListener('click', () => openPreview(card)));
+closeLightbox.addEventListener('click', closePreview);
+prevButtons.forEach((button) => button.addEventListener('click', () => stepPreview(-1)));
+nextButtons.forEach((button) => button.addEventListener('click', () => stepPreview(1)));
+lightbox.addEventListener('click', (event) => { if (event.target === lightbox) closePreview(); });
+document.addEventListener('keydown', (event) => {
+  if (!lightbox.classList.contains('is-open')) return;
+  if (event.key === 'Escape') closePreview();
+  if (event.key === 'ArrowLeft') stepPreview(-1);
+  if (event.key === 'ArrowRight') stepPreview(1);
+});
+lightbox.addEventListener('touchstart', (event) => {
+  const touch = event.changedTouches[0]; touchStartX = touch.clientX; touchStartY = touch.clientY;
+}, { passive: true });
+lightbox.addEventListener('touchend', (event) => {
+  const touch = event.changedTouches[0];
+  const dx = touch.clientX - touchStartX;
+  const dy = touch.clientY - touchStartY;
+  if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.4) stepPreview(dx < 0 ? 1 : -1);
+}, { passive: true });
+</script>
+</body>
+</html>
