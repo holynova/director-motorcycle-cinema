@@ -21,3 +21,8 @@ A static cinema-style gallery of 50 director-inspired motorcycle city images.
 ## Deployment
 
 This site is published with GitHub Pages from the repository root.
+
+
+## Cat Window Program
+
+新增 50 张「女人抱着猫在窗前看风景」导演风格图片，并已加入同一个 GitHub Pages 页面。
